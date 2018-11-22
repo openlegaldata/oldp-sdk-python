@@ -34,7 +34,7 @@ class Case(object):
         'id': 'int',
         'court_id': 'str',
         'file_number': 'str',
-        'date': 'date',
+        '_date': 'date',
         'type': 'str',
         'ecli': 'str',
         'content': 'str'
@@ -44,19 +44,19 @@ class Case(object):
         'id': 'id',
         'court_id': 'court_id',
         'file_number': 'file_number',
-        'date': 'date',
+        '_date': 'date',
         'type': 'type',
         'ecli': 'ecli',
         'content': 'content'
     }
 
-    def __init__(self, id=None, court_id=None, file_number=None, date=None, type=None, ecli=None, content=None):  # noqa: E501
+    def __init__(self, id=None, court_id=None, file_number=None, _date=None, type=None, ecli=None, content=None):  # noqa: E501
         """Case - a model defined in Swagger"""  # noqa: E501
 
         self._id = None
         self._court_id = None
         self._file_number = None
-        self._date = None
+        self.__date = None
         self._type = None
         self._ecli = None
         self._content = None
@@ -68,8 +68,8 @@ class Case(object):
             self.court_id = court_id
         if file_number is not None:
             self.file_number = file_number
-        if date is not None:
-            self.date = date
+        if _date is not None:
+            self._date = _date
         if type is not None:
             self.type = type
         if ecli is not None:
@@ -144,27 +144,27 @@ class Case(object):
         self._file_number = file_number
 
     @property
-    def date(self):
-        """Gets the date of this Case.  # noqa: E501
+    def _date(self):
+        """Gets the _date of this Case.  # noqa: E501
 
         Publication date as in source  # noqa: E501
 
-        :return: The date of this Case.  # noqa: E501
+        :return: The _date of this Case.  # noqa: E501
         :rtype: date
         """
-        return self._date
+        return self.__date
 
-    @date.setter
-    def date(self, date):
-        """Sets the date of this Case.
+    @_date.setter
+    def _date(self, _date):
+        """Sets the _date of this Case.
 
         Publication date as in source  # noqa: E501
 
-        :param date: The date of this Case.  # noqa: E501
+        :param _date: The _date of this Case.  # noqa: E501
         :type: date
         """
 
-        self._date = date
+        self.__date = _date
 
     @property
     def type(self):
@@ -220,7 +220,7 @@ class Case(object):
     def content(self):
         """Gets the content of this Case.  # noqa: E501
 
-        Case full-text formatted in Legal Markdown  # noqa: E501
+        Case full-text formatted in Legal HTML  # noqa: E501
 
         :return: The content of this Case.  # noqa: E501
         :rtype: str
@@ -231,7 +231,7 @@ class Case(object):
     def content(self, content):
         """Sets the content of this Case.
 
-        Case full-text formatted in Legal Markdown  # noqa: E501
+        Case full-text formatted in Legal HTML  # noqa: E501
 
         :param content: The content of this Case.  # noqa: E501
         :type: str
@@ -262,6 +262,9 @@ class Case(object):
                 ))
             else:
                 result[attr] = value
+        if issubclass(Case, dict):
+            for key, value in self.items():
+                result[key] = value
 
         return result
 

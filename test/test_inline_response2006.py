@@ -16,12 +16,12 @@ from __future__ import absolute_import
 import unittest
 
 import oldp_client
-from oldp_client.models.inline_response_200_4 import InlineResponse2004  # noqa: E501
+from oldp_client.models.inline_response2006 import InlineResponse2006  # noqa: E501
 from oldp_client.rest import ApiException
 
 
-class TestInlineResponse2004(unittest.TestCase):
-    """InlineResponse2004 unit test stubs"""
+class TestInlineResponse2006(unittest.TestCase):
+    """InlineResponse2006 unit test stubs"""
 
     def setUp(self):
         pass
@@ -29,10 +29,10 @@ class TestInlineResponse2004(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testInlineResponse2004(self):
-        """Test InlineResponse2004"""
+    def testInlineResponse2006(self):
+        """Test InlineResponse2006"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = oldp_client.models.inline_response_200_4.InlineResponse2004()  # noqa: E501
+        # model = oldp_client.models.inline_response2006.InlineResponse2006()  # noqa: E501
         pass
 
 

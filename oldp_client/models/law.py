@@ -33,31 +33,31 @@ class Law(object):
     swagger_types = {
         'book': 'int',
         'title': 'str',
-        'text': 'str',
+        'content': 'str',
         'slug': 'str'
     }
 
     attribute_map = {
         'book': 'book',
         'title': 'title',
-        'text': 'text',
+        'content': 'content',
         'slug': 'slug'
     }
 
-    def __init__(self, book=None, title=None, text=None, slug=None):  # noqa: E501
+    def __init__(self, book=None, title=None, content=None, slug=None):  # noqa: E501
         """Law - a model defined in Swagger"""  # noqa: E501
 
         self._book = None
         self._title = None
-        self._text = None
+        self._content = None
         self._slug = None
         self.discriminator = None
 
         self.book = book
         if title is not None:
             self.title = title
-        if text is not None:
-            self.text = text
+        if content is not None:
+            self.content = content
         self.slug = slug
 
     @property
@@ -111,27 +111,27 @@ class Law(object):
         self._title = title
 
     @property
-    def text(self):
-        """Gets the text of this Law.  # noqa: E501
+    def content(self):
+        """Gets the content of this Law.  # noqa: E501
 
-        Plain text for searching  # noqa: E501
+        Law content with HTML tags and reference markers (managed by CKEditor)  # noqa: E501
 
-        :return: The text of this Law.  # noqa: E501
+        :return: The content of this Law.  # noqa: E501
         :rtype: str
         """
-        return self._text
+        return self._content
 
-    @text.setter
-    def text(self, text):
-        """Sets the text of this Law.
+    @content.setter
+    def content(self, content):
+        """Sets the content of this Law.
 
-        Plain text for searching  # noqa: E501
+        Law content with HTML tags and reference markers (managed by CKEditor)  # noqa: E501
 
-        :param text: The text of this Law.  # noqa: E501
+        :param content: The content of this Law.  # noqa: E501
         :type: str
         """
 
-        self._text = text
+        self._content = content
 
     @property
     def slug(self):
@@ -157,8 +157,8 @@ class Law(object):
             raise ValueError("Invalid value for `slug`, must not be `None`")  # noqa: E501
         if slug is not None and len(slug) > 200:
             raise ValueError("Invalid value for `slug`, length must be less than or equal to `200`")  # noqa: E501
-        if slug is not None and not re.search('^[-a-zA-Z0-9_]+$', slug):  # noqa: E501
-            raise ValueError("Invalid value for `slug`, must be a follow pattern or equal to `/^[-a-zA-Z0-9_]+$/`")  # noqa: E501
+        if slug is not None and not re.search(r'^[-a-zA-Z0-9_]+$', slug):  # noqa: E501
+            raise ValueError(r"Invalid value for `slug`, must be a follow pattern or equal to `/^[-a-zA-Z0-9_]+$/`")  # noqa: E501
 
         self._slug = slug
 
@@ -183,6 +183,9 @@ class Law(object):
                 ))
             else:
                 result[attr] = value
+        if issubclass(Law, dict):
+            for key, value in self.items():
+                result[key] = value
 
         return result
 
