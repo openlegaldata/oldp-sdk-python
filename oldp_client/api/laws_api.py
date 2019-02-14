@@ -38,18 +38,18 @@ class LawsApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.laws_create(data, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.laws_create(data, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param Law data: (required)
         :return: Law
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.laws_create_with_http_info(data, **kwargs)  # noqa: E501
         else:
             (data) = self.laws_create_with_http_info(data, **kwargs)  # noqa: E501
@@ -60,11 +60,11 @@ class LawsApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.laws_create_with_http_info(data, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.laws_create_with_http_info(data, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param Law data: (required)
         :return: Law
                  If the method is called asynchronously,
@@ -72,7 +72,7 @@ class LawsApi(object):
         """
 
         all_params = ['data']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -126,7 +126,7 @@ class LawsApi(object):
             files=local_var_files,
             response_type='Law',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -137,18 +137,18 @@ class LawsApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.laws_delete(id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.laws_delete(id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int id: A unique integer value identifying this law. (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.laws_delete_with_http_info(id, **kwargs)  # noqa: E501
         else:
             (data) = self.laws_delete_with_http_info(id, **kwargs)  # noqa: E501
@@ -159,11 +159,11 @@ class LawsApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.laws_delete_with_http_info(id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.laws_delete_with_http_info(id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int id: A unique integer value identifying this law. (required)
         :return: None
                  If the method is called asynchronously,
@@ -171,7 +171,7 @@ class LawsApi(object):
         """
 
         all_params = ['id']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -225,7 +225,7 @@ class LawsApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -236,11 +236,11 @@ class LawsApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.laws_list(async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.laws_list(async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str book_id: 
         :param str book__latest: 
         :param str book__revision_date: 
@@ -251,7 +251,7 @@ class LawsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.laws_list_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.laws_list_with_http_info(**kwargs)  # noqa: E501
@@ -262,11 +262,11 @@ class LawsApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.laws_list_with_http_info(async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.laws_list_with_http_info(async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str book_id: 
         :param str book__latest: 
         :param str book__revision_date: 
@@ -278,7 +278,7 @@ class LawsApi(object):
         """
 
         all_params = ['book_id', 'book__latest', 'book__revision_date', 'limit', 'offset']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -336,7 +336,7 @@ class LawsApi(object):
             files=local_var_files,
             response_type='InlineResponse2008',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -347,11 +347,11 @@ class LawsApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.laws_partial_update(id, data, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.laws_partial_update(id, data, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int id: A unique integer value identifying this law. (required)
         :param Law data: (required)
         :return: Law
@@ -359,7 +359,7 @@ class LawsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.laws_partial_update_with_http_info(id, data, **kwargs)  # noqa: E501
         else:
             (data) = self.laws_partial_update_with_http_info(id, data, **kwargs)  # noqa: E501
@@ -370,11 +370,11 @@ class LawsApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.laws_partial_update_with_http_info(id, data, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.laws_partial_update_with_http_info(id, data, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int id: A unique integer value identifying this law. (required)
         :param Law data: (required)
         :return: Law
@@ -383,7 +383,7 @@ class LawsApi(object):
         """
 
         all_params = ['id', 'data']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -443,7 +443,7 @@ class LawsApi(object):
             files=local_var_files,
             response_type='Law',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -454,18 +454,18 @@ class LawsApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.laws_read(id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.laws_read(id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int id: A unique integer value identifying this law. (required)
         :return: Law
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.laws_read_with_http_info(id, **kwargs)  # noqa: E501
         else:
             (data) = self.laws_read_with_http_info(id, **kwargs)  # noqa: E501
@@ -476,11 +476,11 @@ class LawsApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.laws_read_with_http_info(id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.laws_read_with_http_info(id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int id: A unique integer value identifying this law. (required)
         :return: Law
                  If the method is called asynchronously,
@@ -488,7 +488,7 @@ class LawsApi(object):
         """
 
         all_params = ['id']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -542,7 +542,7 @@ class LawsApi(object):
             files=local_var_files,
             response_type='Law',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -553,11 +553,11 @@ class LawsApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.laws_search_list(async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.laws_search_list(async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int page: A page number within the paginated result set.
         :param int page_size: Number of results to return per page.
         :return: InlineResponse2009
@@ -565,7 +565,7 @@ class LawsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.laws_search_list_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.laws_search_list_with_http_info(**kwargs)  # noqa: E501
@@ -576,11 +576,11 @@ class LawsApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.laws_search_list_with_http_info(async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.laws_search_list_with_http_info(async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int page: A page number within the paginated result set.
         :param int page_size: Number of results to return per page.
         :return: InlineResponse2009
@@ -589,7 +589,7 @@ class LawsApi(object):
         """
 
         all_params = ['page', 'page_size']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -641,7 +641,7 @@ class LawsApi(object):
             files=local_var_files,
             response_type='InlineResponse2009',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -652,18 +652,18 @@ class LawsApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.laws_search_read(id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.laws_search_read(id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str id: (required)
         :return: LawSearch
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.laws_search_read_with_http_info(id, **kwargs)  # noqa: E501
         else:
             (data) = self.laws_search_read_with_http_info(id, **kwargs)  # noqa: E501
@@ -674,11 +674,11 @@ class LawsApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.laws_search_read_with_http_info(id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.laws_search_read_with_http_info(id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str id: (required)
         :return: LawSearch
                  If the method is called asynchronously,
@@ -686,7 +686,7 @@ class LawsApi(object):
         """
 
         all_params = ['id']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -740,7 +740,7 @@ class LawsApi(object):
             files=local_var_files,
             response_type='LawSearch',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -751,11 +751,11 @@ class LawsApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.laws_update(id, data, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.laws_update(id, data, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int id: A unique integer value identifying this law. (required)
         :param Law data: (required)
         :return: Law
@@ -763,7 +763,7 @@ class LawsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.laws_update_with_http_info(id, data, **kwargs)  # noqa: E501
         else:
             (data) = self.laws_update_with_http_info(id, data, **kwargs)  # noqa: E501
@@ -774,11 +774,11 @@ class LawsApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.laws_update_with_http_info(id, data, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.laws_update_with_http_info(id, data, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int id: A unique integer value identifying this law. (required)
         :param Law data: (required)
         :return: Law
@@ -787,7 +787,7 @@ class LawsApi(object):
         """
 
         all_params = ['id', 'data']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -847,7 +847,7 @@ class LawsApi(object):
             files=local_var_files,
             response_type='Law',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),

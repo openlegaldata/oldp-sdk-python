@@ -173,6 +173,9 @@ class LawSearch(object):
                 ))
             else:
                 result[attr] = value
+        if issubclass(LawSearch, dict):
+            for key, value in self.items():
+                result[key] = value
 
         return result
 
