@@ -71,7 +71,7 @@ except ApiException as e:
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *http://de.openlegaldata.io/api*
+All URIs are relative to *https://de.openlegaldata.io/api*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------

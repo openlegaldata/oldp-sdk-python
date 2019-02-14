@@ -1,6 +1,6 @@
 # oldp_client.LawBooksApi
 
-All URIs are relative to *http://de.openlegaldata.io/api*
+All URIs are relative to *https://de.openlegaldata.io/api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
