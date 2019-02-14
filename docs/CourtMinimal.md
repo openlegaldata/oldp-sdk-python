@@ -1,23 +1,13 @@
-# Court
+# CourtMinimal
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** |  | [optional] 
 **name** | **str** | Full name of the court with location | 
-**court_type** | **str** | Court type AG,VG,... | [optional] 
+**slug** | **str** | Type &amp; city name as lowercase | 
 **city** | **int** | Court belongs to this city, if null court is state-level | [optional] 
 **state** | **int** | Court belongs to this state (derive country of this field) | 
-**code** | **str** | Unique court identifier based on ECLI (e.g. BVerfG) | 
-**slug** | **str** | Type &amp; city name as lowercase | 
-**description** | **str** |  | [optional] 
-**image** | **str** |  | [optional] 
-**homepage** | **str** | Official court homepage | [optional] 
-**street_address** | **str** | Street address with house number | [optional] 
-**postal_code** | **str** | Postal code (ZIP code) | [optional] 
-**address_locality** | **str** | Locality (city name) | [optional] 
-**telephone** | **str** | Telephone number | [optional] 
-**fax_number** | **str** | Fax number | [optional] 
 **jurisdiction** | **str** | Jurisdiction of court (ordinary, civil, ...) | [optional] 
 **level_of_appeal** | **str** | Subject-matter jurisdiction (local, federal, high court, ...) | [optional] 
 

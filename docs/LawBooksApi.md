@@ -118,7 +118,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **law_books_list**
-> InlineResponse2004 law_books_list(slug=slug, code=code, latest=latest, revision_date=revision_date, limit=limit, offset=offset)
+> InlineResponse2006 law_books_list(slug=slug, code=code, latest=latest, revision_date=revision_date, limit=limit, offset=offset)
 
 
 
@@ -167,7 +167,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2004**](InlineResponse2004.md)
+[**InlineResponse2006**](InlineResponse2006.md)
 
 ### Authorization
 

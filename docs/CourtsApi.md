@@ -118,7 +118,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **courts_list**
-> InlineResponse2003 courts_list(court_type=court_type, slug=slug, code=code, state_id=state_id, city_id=city_id, limit=limit, offset=offset)
+> InlineResponse2005 courts_list(court_type=court_type, slug=slug, code=code, state_id=state_id, city_id=city_id, limit=limit, offset=offset)
 
 
 
@@ -169,7 +169,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2003**](InlineResponse2003.md)
+[**InlineResponse2005**](InlineResponse2005.md)
 
 ### Authorization
 

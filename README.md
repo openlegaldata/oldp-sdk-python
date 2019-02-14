@@ -52,20 +52,18 @@ from oldp_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: api_key
-configuration = oldp_client.Configuration()
-configuration.api_key['api_key'] = 'YOUR_API_KEY'
+oldp_client.configuration.api_key['api_key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['api_key'] = 'Bearer'
-
+# oldp_client.configuration.api_key_prefix['api_key'] = 'Bearer'
 # create an instance of the API class
-api_instance = oldp_client.CasesApi(oldp_client.ApiClient(configuration))
-data = oldp_client.Case() # Case | 
+api_instance = oldp_client.AnnotationLabelsApi()
+data = oldp_client.AnnotationLabel() # AnnotationLabel | 
 
 try:
-    api_response = api_instance.cases_create(data)
+    api_response = api_instance.annotation_labels_create(data)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling CasesApi->cases_create: %s\n" % e)
+    print("Exception when calling AnnotationLabelsApi->annotation_labels_create: %s\n" % e)
 
 ```
 
@@ -75,6 +73,18 @@ All URIs are relative to *http://de.openlegaldata.io/api*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*AnnotationLabelsApi* | [**annotation_labels_create**](docs/AnnotationLabelsApi.md#annotation_labels_create) | **POST** /annotation_labels/ | 
+*AnnotationLabelsApi* | [**annotation_labels_delete**](docs/AnnotationLabelsApi.md#annotation_labels_delete) | **DELETE** /annotation_labels/{id}/ | 
+*AnnotationLabelsApi* | [**annotation_labels_list**](docs/AnnotationLabelsApi.md#annotation_labels_list) | **GET** /annotation_labels/ | 
+*AnnotationLabelsApi* | [**annotation_labels_partial_update**](docs/AnnotationLabelsApi.md#annotation_labels_partial_update) | **PATCH** /annotation_labels/{id}/ | 
+*AnnotationLabelsApi* | [**annotation_labels_read**](docs/AnnotationLabelsApi.md#annotation_labels_read) | **GET** /annotation_labels/{id}/ | 
+*AnnotationLabelsApi* | [**annotation_labels_update**](docs/AnnotationLabelsApi.md#annotation_labels_update) | **PUT** /annotation_labels/{id}/ | 
+*CaseAnnotationsApi* | [**case_annotations_create**](docs/CaseAnnotationsApi.md#case_annotations_create) | **POST** /case_annotations/ | 
+*CaseAnnotationsApi* | [**case_annotations_delete**](docs/CaseAnnotationsApi.md#case_annotations_delete) | **DELETE** /case_annotations/{id}/ | 
+*CaseAnnotationsApi* | [**case_annotations_list**](docs/CaseAnnotationsApi.md#case_annotations_list) | **GET** /case_annotations/ | 
+*CaseAnnotationsApi* | [**case_annotations_partial_update**](docs/CaseAnnotationsApi.md#case_annotations_partial_update) | **PATCH** /case_annotations/{id}/ | 
+*CaseAnnotationsApi* | [**case_annotations_read**](docs/CaseAnnotationsApi.md#case_annotations_read) | **GET** /case_annotations/{id}/ | 
+*CaseAnnotationsApi* | [**case_annotations_update**](docs/CaseAnnotationsApi.md#case_annotations_update) | **PUT** /case_annotations/{id}/ | 
 *CasesApi* | [**cases_create**](docs/CasesApi.md#cases_create) | **POST** /cases/ | 
 *CasesApi* | [**cases_delete**](docs/CasesApi.md#cases_delete) | **DELETE** /cases/{id}/ | 
 *CasesApi* | [**cases_list**](docs/CasesApi.md#cases_list) | **GET** /cases/ | 
@@ -122,10 +132,13 @@ Class | Method | HTTP request | Description
 
 ## Documentation For Models
 
+ - [AnnotationLabel](docs/AnnotationLabel.md)
  - [Case](docs/Case.md)
+ - [CaseAnnotation](docs/CaseAnnotation.md)
  - [City](docs/City.md)
  - [Country](docs/Country.md)
  - [Court](docs/Court.md)
+ - [CourtMinimal](docs/CourtMinimal.md)
  - [InlineResponse200](docs/InlineResponse200.md)
  - [InlineResponse2001](docs/InlineResponse2001.md)
  - [InlineResponse2002](docs/InlineResponse2002.md)
@@ -133,6 +146,8 @@ Class | Method | HTTP request | Description
  - [InlineResponse2004](docs/InlineResponse2004.md)
  - [InlineResponse2005](docs/InlineResponse2005.md)
  - [InlineResponse2006](docs/InlineResponse2006.md)
+ - [InlineResponse2007](docs/InlineResponse2007.md)
+ - [InlineResponse2008](docs/InlineResponse2008.md)
  - [Law](docs/Law.md)
  - [LawBook](docs/LawBook.md)
  - [State](docs/State.md)
@@ -150,5 +165,5 @@ Class | Method | HTTP request | Description
 
 ## Author
 
-api@openlegaldata.io
+hello@openlegaldata.io
 

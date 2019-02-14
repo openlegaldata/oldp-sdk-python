@@ -1,19 +1,19 @@
-# oldp_client.CountriesApi
+# oldp_client.CaseAnnotationsApi
 
 All URIs are relative to *http://de.openlegaldata.io/api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**countries_create**](CountriesApi.md#countries_create) | **POST** /countries/ | 
-[**countries_delete**](CountriesApi.md#countries_delete) | **DELETE** /countries/{id}/ | 
-[**countries_list**](CountriesApi.md#countries_list) | **GET** /countries/ | 
-[**countries_partial_update**](CountriesApi.md#countries_partial_update) | **PATCH** /countries/{id}/ | 
-[**countries_read**](CountriesApi.md#countries_read) | **GET** /countries/{id}/ | 
-[**countries_update**](CountriesApi.md#countries_update) | **PUT** /countries/{id}/ | 
+[**case_annotations_create**](CaseAnnotationsApi.md#case_annotations_create) | **POST** /case_annotations/ | 
+[**case_annotations_delete**](CaseAnnotationsApi.md#case_annotations_delete) | **DELETE** /case_annotations/{id}/ | 
+[**case_annotations_list**](CaseAnnotationsApi.md#case_annotations_list) | **GET** /case_annotations/ | 
+[**case_annotations_partial_update**](CaseAnnotationsApi.md#case_annotations_partial_update) | **PATCH** /case_annotations/{id}/ | 
+[**case_annotations_read**](CaseAnnotationsApi.md#case_annotations_read) | **GET** /case_annotations/{id}/ | 
+[**case_annotations_update**](CaseAnnotationsApi.md#case_annotations_update) | **PUT** /case_annotations/{id}/ | 
 
 
-# **countries_create**
-> Country countries_create(data)
+# **case_annotations_create**
+> CaseAnnotation case_annotations_create(data)
 
 
 
@@ -34,25 +34,25 @@ configuration.api_key['api_key'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_key'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = oldp_client.CountriesApi(oldp_client.ApiClient(configuration))
-data = oldp_client.Country() # Country | 
+api_instance = oldp_client.CaseAnnotationsApi(oldp_client.ApiClient(configuration))
+data = oldp_client.CaseAnnotation() # CaseAnnotation | 
 
 try:
-    api_response = api_instance.countries_create(data)
+    api_response = api_instance.case_annotations_create(data)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling CountriesApi->countries_create: %s\n" % e)
+    print("Exception when calling CaseAnnotationsApi->case_annotations_create: %s\n" % e)
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **data** | [**Country**](Country.md)|  | 
+ **data** | [**CaseAnnotation**](CaseAnnotation.md)|  | 
 
 ### Return type
 
-[**Country**](Country.md)
+[**CaseAnnotation**](CaseAnnotation.md)
 
 ### Authorization
 
@@ -65,8 +65,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **countries_delete**
-> countries_delete(id)
+# **case_annotations_delete**
+> case_annotations_delete(id)
 
 
 
@@ -87,20 +87,20 @@ configuration.api_key['api_key'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_key'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = oldp_client.CountriesApi(oldp_client.ApiClient(configuration))
-id = 56 # int | A unique integer value identifying this country.
+api_instance = oldp_client.CaseAnnotationsApi(oldp_client.ApiClient(configuration))
+id = 56 # int | A unique integer value identifying this case annotation.
 
 try:
-    api_instance.countries_delete(id)
+    api_instance.case_annotations_delete(id)
 except ApiException as e:
-    print("Exception when calling CountriesApi->countries_delete: %s\n" % e)
+    print("Exception when calling CaseAnnotationsApi->case_annotations_delete: %s\n" % e)
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this country. | 
+ **id** | **int**| A unique integer value identifying this case annotation. | 
 
 ### Return type
 
@@ -117,8 +117,8 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **countries_list**
-> InlineResponse2004 countries_list(code=code, limit=limit, offset=offset)
+# **case_annotations_list**
+> InlineResponse2001 case_annotations_list(belongs_to=belongs_to, label=label, limit=limit, offset=offset)
 
 
 
@@ -139,29 +139,31 @@ configuration.api_key['api_key'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_key'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = oldp_client.CountriesApi(oldp_client.ApiClient(configuration))
-code = 'code_example' # str |  (optional)
+api_instance = oldp_client.CaseAnnotationsApi(oldp_client.ApiClient(configuration))
+belongs_to = 8.14 # float |  (optional)
+label = 8.14 # float |  (optional)
 limit = 56 # int | Number of results to return per page. (optional)
 offset = 56 # int | The initial index from which to return the results. (optional)
 
 try:
-    api_response = api_instance.countries_list(code=code, limit=limit, offset=offset)
+    api_response = api_instance.case_annotations_list(belongs_to=belongs_to, label=label, limit=limit, offset=offset)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling CountriesApi->countries_list: %s\n" % e)
+    print("Exception when calling CaseAnnotationsApi->case_annotations_list: %s\n" % e)
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **code** | **str**|  | [optional] 
+ **belongs_to** | **float**|  | [optional] 
+ **label** | **float**|  | [optional] 
  **limit** | **int**| Number of results to return per page. | [optional] 
  **offset** | **int**| The initial index from which to return the results. | [optional] 
 
 ### Return type
 
-[**InlineResponse2004**](InlineResponse2004.md)
+[**InlineResponse2001**](InlineResponse2001.md)
 
 ### Authorization
 
@@ -174,8 +176,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **countries_partial_update**
-> Country countries_partial_update(id, data)
+# **case_annotations_partial_update**
+> CaseAnnotation case_annotations_partial_update(id, data)
 
 
 
@@ -196,27 +198,27 @@ configuration.api_key['api_key'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_key'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = oldp_client.CountriesApi(oldp_client.ApiClient(configuration))
-id = 56 # int | A unique integer value identifying this country.
-data = oldp_client.Country() # Country | 
+api_instance = oldp_client.CaseAnnotationsApi(oldp_client.ApiClient(configuration))
+id = 56 # int | A unique integer value identifying this case annotation.
+data = oldp_client.CaseAnnotation() # CaseAnnotation | 
 
 try:
-    api_response = api_instance.countries_partial_update(id, data)
+    api_response = api_instance.case_annotations_partial_update(id, data)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling CountriesApi->countries_partial_update: %s\n" % e)
+    print("Exception when calling CaseAnnotationsApi->case_annotations_partial_update: %s\n" % e)
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this country. | 
- **data** | [**Country**](Country.md)|  | 
+ **id** | **int**| A unique integer value identifying this case annotation. | 
+ **data** | [**CaseAnnotation**](CaseAnnotation.md)|  | 
 
 ### Return type
 
-[**Country**](Country.md)
+[**CaseAnnotation**](CaseAnnotation.md)
 
 ### Authorization
 
@@ -229,8 +231,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **countries_read**
-> Country countries_read(id)
+# **case_annotations_read**
+> CaseAnnotation case_annotations_read(id)
 
 
 
@@ -251,25 +253,25 @@ configuration.api_key['api_key'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_key'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = oldp_client.CountriesApi(oldp_client.ApiClient(configuration))
-id = 56 # int | A unique integer value identifying this country.
+api_instance = oldp_client.CaseAnnotationsApi(oldp_client.ApiClient(configuration))
+id = 56 # int | A unique integer value identifying this case annotation.
 
 try:
-    api_response = api_instance.countries_read(id)
+    api_response = api_instance.case_annotations_read(id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling CountriesApi->countries_read: %s\n" % e)
+    print("Exception when calling CaseAnnotationsApi->case_annotations_read: %s\n" % e)
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this country. | 
+ **id** | **int**| A unique integer value identifying this case annotation. | 
 
 ### Return type
 
-[**Country**](Country.md)
+[**CaseAnnotation**](CaseAnnotation.md)
 
 ### Authorization
 
@@ -282,8 +284,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **countries_update**
-> Country countries_update(id, data)
+# **case_annotations_update**
+> CaseAnnotation case_annotations_update(id, data)
 
 
 
@@ -304,27 +306,27 @@ configuration.api_key['api_key'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_key'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = oldp_client.CountriesApi(oldp_client.ApiClient(configuration))
-id = 56 # int | A unique integer value identifying this country.
-data = oldp_client.Country() # Country | 
+api_instance = oldp_client.CaseAnnotationsApi(oldp_client.ApiClient(configuration))
+id = 56 # int | A unique integer value identifying this case annotation.
+data = oldp_client.CaseAnnotation() # CaseAnnotation | 
 
 try:
-    api_response = api_instance.countries_update(id, data)
+    api_response = api_instance.case_annotations_update(id, data)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling CountriesApi->countries_update: %s\n" % e)
+    print("Exception when calling CaseAnnotationsApi->case_annotations_update: %s\n" % e)
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this country. | 
- **data** | [**Country**](Country.md)|  | 
+ **id** | **int**| A unique integer value identifying this case annotation. | 
+ **data** | [**CaseAnnotation**](CaseAnnotation.md)|  | 
 
 ### Return type
 
-[**Country**](Country.md)
+[**CaseAnnotation**](CaseAnnotation.md)
 
 ### Authorization
 

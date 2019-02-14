@@ -118,7 +118,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cases_list**
-> InlineResponse200 cases_list(slug=slug, file_number=file_number, court_id=court_id, limit=limit, offset=offset)
+> InlineResponse2002 cases_list(ordering=ordering, _date=_date, slug=slug, file_number=file_number, ecli=ecli, court=court, court__slug=court__slug, court__jurisdiction=court__jurisdiction, court__level_of_appeal=court__level_of_appeal, court__state=court__state, page=page, page_size=page_size)
 
 
 
@@ -140,14 +140,21 @@ configuration.api_key['api_key'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = oldp_client.CasesApi(oldp_client.ApiClient(configuration))
+ordering = 'ordering_example' # str | Which field to use when ordering the results. (optional)
+_date = '_date_example' # str |  (optional)
 slug = 'slug_example' # str |  (optional)
 file_number = 'file_number_example' # str |  (optional)
-court_id = 'court_id_example' # str |  (optional)
-limit = 56 # int | Number of results to return per page. (optional)
-offset = 56 # int | The initial index from which to return the results. (optional)
+ecli = 'ecli_example' # str |  (optional)
+court = 8.14 # float |  (optional)
+court__slug = 'court__slug_example' # str |  (optional)
+court__jurisdiction = 'court__jurisdiction_example' # str |  (optional)
+court__level_of_appeal = 'court__level_of_appeal_example' # str |  (optional)
+court__state = 'court__state_example' # str |  (optional)
+page = 56 # int | A page number within the paginated result set. (optional)
+page_size = 56 # int | Number of results to return per page. (optional)
 
 try:
-    api_response = api_instance.cases_list(slug=slug, file_number=file_number, court_id=court_id, limit=limit, offset=offset)
+    api_response = api_instance.cases_list(ordering=ordering, _date=_date, slug=slug, file_number=file_number, ecli=ecli, court=court, court__slug=court__slug, court__jurisdiction=court__jurisdiction, court__level_of_appeal=court__level_of_appeal, court__state=court__state, page=page, page_size=page_size)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CasesApi->cases_list: %s\n" % e)
@@ -157,15 +164,22 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **ordering** | **str**| Which field to use when ordering the results. | [optional] 
+ **_date** | **str**|  | [optional] 
  **slug** | **str**|  | [optional] 
  **file_number** | **str**|  | [optional] 
- **court_id** | **str**|  | [optional] 
- **limit** | **int**| Number of results to return per page. | [optional] 
- **offset** | **int**| The initial index from which to return the results. | [optional] 
+ **ecli** | **str**|  | [optional] 
+ **court** | **float**|  | [optional] 
+ **court__slug** | **str**|  | [optional] 
+ **court__jurisdiction** | **str**|  | [optional] 
+ **court__level_of_appeal** | **str**|  | [optional] 
+ **court__state** | **str**|  | [optional] 
+ **page** | **int**| A page number within the paginated result set. | [optional] 
+ **page_size** | **int**| Number of results to return per page. | [optional] 
 
 ### Return type
 
-[**InlineResponse200**](InlineResponse200.md)
+[**InlineResponse2002**](InlineResponse2002.md)
 
 ### Authorization
 
