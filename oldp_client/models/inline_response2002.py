@@ -171,9 +171,6 @@ class InlineResponse2002(object):
                 ))
             else:
                 result[attr] = value
-        if issubclass(InlineResponse2002, dict):
-            for key, value in self.items():
-                result[key] = value
 
         return result
 

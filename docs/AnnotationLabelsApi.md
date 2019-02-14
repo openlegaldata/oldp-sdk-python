@@ -29,9 +29,9 @@ from pprint import pprint
 
 # Configure API key authorization: api_key
 configuration = oldp_client.Configuration()
-configuration.api_key['api_key'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['api_key'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = oldp_client.AnnotationLabelsApi(oldp_client.ApiClient(configuration))
@@ -82,9 +82,9 @@ from pprint import pprint
 
 # Configure API key authorization: api_key
 configuration = oldp_client.Configuration()
-configuration.api_key['api_key'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['api_key'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = oldp_client.AnnotationLabelsApi(oldp_client.ApiClient(configuration))
@@ -134,9 +134,9 @@ from pprint import pprint
 
 # Configure API key authorization: api_key
 configuration = oldp_client.Configuration()
-configuration.api_key['api_key'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['api_key'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = oldp_client.AnnotationLabelsApi(oldp_client.ApiClient(configuration))
@@ -199,9 +199,9 @@ from pprint import pprint
 
 # Configure API key authorization: api_key
 configuration = oldp_client.Configuration()
-configuration.api_key['api_key'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['api_key'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = oldp_client.AnnotationLabelsApi(oldp_client.ApiClient(configuration))
@@ -254,9 +254,9 @@ from pprint import pprint
 
 # Configure API key authorization: api_key
 configuration = oldp_client.Configuration()
-configuration.api_key['api_key'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['api_key'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = oldp_client.AnnotationLabelsApi(oldp_client.ApiClient(configuration))
@@ -307,9 +307,9 @@ from pprint import pprint
 
 # Configure API key authorization: api_key
 configuration = oldp_client.Configuration()
-configuration.api_key['api_key'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['api_key'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = oldp_client.AnnotationLabelsApi(oldp_client.ApiClient(configuration))

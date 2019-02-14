@@ -16,7 +16,7 @@ import re  # noqa: F401
 
 import six
 
-from oldp_client.models.court import Court  # noqa: F401,E501
+from oldp_client.models.country import Country  # noqa: F401,E501
 
 
 class InlineResponse2005(object):
@@ -36,7 +36,7 @@ class InlineResponse2005(object):
         'count': 'int',
         'next': 'str',
         'previous': 'str',
-        'results': 'list[Court]'
+        'results': 'list[Country]'
     }
 
     attribute_map = {
@@ -133,7 +133,7 @@ class InlineResponse2005(object):
 
 
         :return: The results of this InlineResponse2005.  # noqa: E501
-        :rtype: list[Court]
+        :rtype: list[Country]
         """
         return self._results
 
@@ -143,7 +143,7 @@ class InlineResponse2005(object):
 
 
         :param results: The results of this InlineResponse2005.  # noqa: E501
-        :type: list[Court]
+        :type: list[Country]
         """
         if results is None:
             raise ValueError("Invalid value for `results`, must not be `None`")  # noqa: E501
@@ -171,9 +171,6 @@ class InlineResponse2005(object):
                 ))
             else:
                 result[attr] = value
-        if issubclass(InlineResponse2005, dict):
-            for key, value in self.items():
-                result[key] = value
 
         return result
 

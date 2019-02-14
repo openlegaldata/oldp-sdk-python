@@ -4,121 +4,12 @@ All URIs are relative to *https://de.openlegaldata.io/api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**courts_create**](CourtsApi.md#courts_create) | **POST** /courts/ | 
-[**courts_delete**](CourtsApi.md#courts_delete) | **DELETE** /courts/{id}/ | 
 [**courts_list**](CourtsApi.md#courts_list) | **GET** /courts/ | 
-[**courts_partial_update**](CourtsApi.md#courts_partial_update) | **PATCH** /courts/{id}/ | 
 [**courts_read**](CourtsApi.md#courts_read) | **GET** /courts/{id}/ | 
-[**courts_update**](CourtsApi.md#courts_update) | **PUT** /courts/{id}/ | 
 
-
-# **courts_create**
-> Court courts_create(data)
-
-
-
-
-
-### Example
-```python
-from __future__ import print_function
-import time
-import oldp_client
-from oldp_client.rest import ApiException
-from pprint import pprint
-
-# Configure API key authorization: api_key
-configuration = oldp_client.Configuration()
-configuration.api_key['api_key'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['api_key'] = 'Bearer'
-
-# create an instance of the API class
-api_instance = oldp_client.CourtsApi(oldp_client.ApiClient(configuration))
-data = oldp_client.Court() # Court | 
-
-try:
-    api_response = api_instance.courts_create(data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CourtsApi->courts_create: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **data** | [**Court**](Court.md)|  | 
-
-### Return type
-
-[**Court**](Court.md)
-
-### Authorization
-
-[api_key](../README.md#api_key)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **courts_delete**
-> courts_delete(id)
-
-
-
-
-
-### Example
-```python
-from __future__ import print_function
-import time
-import oldp_client
-from oldp_client.rest import ApiException
-from pprint import pprint
-
-# Configure API key authorization: api_key
-configuration = oldp_client.Configuration()
-configuration.api_key['api_key'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['api_key'] = 'Bearer'
-
-# create an instance of the API class
-api_instance = oldp_client.CourtsApi(oldp_client.ApiClient(configuration))
-id = 56 # int | A unique integer value identifying this court.
-
-try:
-    api_instance.courts_delete(id)
-except ApiException as e:
-    print("Exception when calling CourtsApi->courts_delete: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this court. | 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-[api_key](../README.md#api_key)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **courts_list**
-> InlineResponse2005 courts_list(court_type=court_type, slug=slug, code=code, state_id=state_id, city_id=city_id, limit=limit, offset=offset)
+> InlineResponse2006 courts_list(court_type=court_type, slug=slug, code=code, state_id=state_id, city_id=city_id, limit=limit, offset=offset)
 
 
 
@@ -134,9 +25,9 @@ from pprint import pprint
 
 # Configure API key authorization: api_key
 configuration = oldp_client.Configuration()
-configuration.api_key['api_key'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['api_key'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = oldp_client.CourtsApi(oldp_client.ApiClient(configuration))
@@ -169,62 +60,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2005**](InlineResponse2005.md)
-
-### Authorization
-
-[api_key](../README.md#api_key)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **courts_partial_update**
-> Court courts_partial_update(id, data)
-
-
-
-
-
-### Example
-```python
-from __future__ import print_function
-import time
-import oldp_client
-from oldp_client.rest import ApiException
-from pprint import pprint
-
-# Configure API key authorization: api_key
-configuration = oldp_client.Configuration()
-configuration.api_key['api_key'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['api_key'] = 'Bearer'
-
-# create an instance of the API class
-api_instance = oldp_client.CourtsApi(oldp_client.ApiClient(configuration))
-id = 56 # int | A unique integer value identifying this court.
-data = oldp_client.Court() # Court | 
-
-try:
-    api_response = api_instance.courts_partial_update(id, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CourtsApi->courts_partial_update: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this court. | 
- **data** | [**Court**](Court.md)|  | 
-
-### Return type
-
-[**Court**](Court.md)
+[**InlineResponse2006**](InlineResponse2006.md)
 
 ### Authorization
 
@@ -254,9 +90,9 @@ from pprint import pprint
 
 # Configure API key authorization: api_key
 configuration = oldp_client.Configuration()
-configuration.api_key['api_key'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['api_key'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = oldp_client.CourtsApi(oldp_client.ApiClient(configuration))
@@ -274,61 +110,6 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| A unique integer value identifying this court. | 
-
-### Return type
-
-[**Court**](Court.md)
-
-### Authorization
-
-[api_key](../README.md#api_key)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **courts_update**
-> Court courts_update(id, data)
-
-
-
-
-
-### Example
-```python
-from __future__ import print_function
-import time
-import oldp_client
-from oldp_client.rest import ApiException
-from pprint import pprint
-
-# Configure API key authorization: api_key
-configuration = oldp_client.Configuration()
-configuration.api_key['api_key'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['api_key'] = 'Bearer'
-
-# create an instance of the API class
-api_instance = oldp_client.CourtsApi(oldp_client.ApiClient(configuration))
-id = 56 # int | A unique integer value identifying this court.
-data = oldp_client.Court() # Court | 
-
-try:
-    api_response = api_instance.courts_update(id, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CourtsApi->courts_update: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this court. | 
- **data** | [**Court**](Court.md)|  | 
 
 ### Return type
 

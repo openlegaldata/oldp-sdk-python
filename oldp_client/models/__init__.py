@@ -18,12 +18,15 @@ from __future__ import absolute_import
 from oldp_client.models.annotation_label import AnnotationLabel
 from oldp_client.models.case import Case
 from oldp_client.models.case_annotation import CaseAnnotation
+from oldp_client.models.case_search import CaseSearch
 from oldp_client.models.city import City
 from oldp_client.models.country import Country
 from oldp_client.models.court import Court
 from oldp_client.models.court_minimal import CourtMinimal
 from oldp_client.models.inline_response200 import InlineResponse200
 from oldp_client.models.inline_response2001 import InlineResponse2001
+from oldp_client.models.inline_response20010 import InlineResponse20010
+from oldp_client.models.inline_response20011 import InlineResponse20011
 from oldp_client.models.inline_response2002 import InlineResponse2002
 from oldp_client.models.inline_response2003 import InlineResponse2003
 from oldp_client.models.inline_response2004 import InlineResponse2004
@@ -31,6 +34,9 @@ from oldp_client.models.inline_response2005 import InlineResponse2005
 from oldp_client.models.inline_response2006 import InlineResponse2006
 from oldp_client.models.inline_response2007 import InlineResponse2007
 from oldp_client.models.inline_response2008 import InlineResponse2008
+from oldp_client.models.inline_response2009 import InlineResponse2009
 from oldp_client.models.law import Law
 from oldp_client.models.law_book import LawBook
+from oldp_client.models.law_search import LawSearch
 from oldp_client.models.state import State
+from oldp_client.models.user import User

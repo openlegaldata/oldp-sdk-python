@@ -214,8 +214,8 @@ class AnnotationLabel(object):
             raise ValueError("Invalid value for `slug`, must not be `None`")  # noqa: E501
         if slug is not None and len(slug) > 100:
             raise ValueError("Invalid value for `slug`, length must be less than or equal to `100`")  # noqa: E501
-        if slug is not None and not re.search(r'^[-a-zA-Z0-9_]+$', slug):  # noqa: E501
-            raise ValueError(r"Invalid value for `slug`, must be a follow pattern or equal to `/^[-a-zA-Z0-9_]+$/`")  # noqa: E501
+        if slug is not None and not re.search('^[-a-zA-Z0-9_]+$', slug):  # noqa: E501
+            raise ValueError("Invalid value for `slug`, must be a follow pattern or equal to `/^[-a-zA-Z0-9_]+$/`")  # noqa: E501
 
         self._slug = slug
 
@@ -337,8 +337,8 @@ class AnnotationLabel(object):
         """
         if color is not None and len(color) > 18:
             raise ValueError("Invalid value for `color`, length must be less than or equal to `18`")  # noqa: E501
-        if color is not None and not re.search(r'^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$', color):  # noqa: E501
-            raise ValueError(r"Invalid value for `color`, must be a follow pattern or equal to `/^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/`")  # noqa: E501
+        if color is not None and not re.search('^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$', color):  # noqa: E501
+            raise ValueError("Invalid value for `color`, must be a follow pattern or equal to `/^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/`")  # noqa: E501
 
         self._color = color
 
@@ -409,9 +409,6 @@ class AnnotationLabel(object):
                 ))
             else:
                 result[attr] = value
-        if issubclass(AnnotationLabel, dict):
-            for key, value in self.items():
-                result[key] = value
 
         return result
 

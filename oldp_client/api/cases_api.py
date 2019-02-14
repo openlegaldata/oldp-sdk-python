@@ -38,18 +38,18 @@ class CasesApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.cases_create(data, async_req=True)
+        asynchronous HTTP request, please pass async=True
+        >>> thread = api.cases_create(data, async=True)
         >>> result = thread.get()
 
-        :param async_req bool
+        :param async bool
         :param Case data: (required)
         :return: Case
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
+        if kwargs.get('async'):
             return self.cases_create_with_http_info(data, **kwargs)  # noqa: E501
         else:
             (data) = self.cases_create_with_http_info(data, **kwargs)  # noqa: E501
@@ -60,11 +60,11 @@ class CasesApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.cases_create_with_http_info(data, async_req=True)
+        asynchronous HTTP request, please pass async=True
+        >>> thread = api.cases_create_with_http_info(data, async=True)
         >>> result = thread.get()
 
-        :param async_req bool
+        :param async bool
         :param Case data: (required)
         :return: Case
                  If the method is called asynchronously,
@@ -72,7 +72,7 @@ class CasesApi(object):
         """
 
         all_params = ['data']  # noqa: E501
-        all_params.append('async_req')
+        all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -126,7 +126,7 @@ class CasesApi(object):
             files=local_var_files,
             response_type='Case',  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
+            async=params.get('async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -137,18 +137,18 @@ class CasesApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.cases_delete(id, async_req=True)
+        asynchronous HTTP request, please pass async=True
+        >>> thread = api.cases_delete(id, async=True)
         >>> result = thread.get()
 
-        :param async_req bool
+        :param async bool
         :param int id: A unique integer value identifying this case. (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
+        if kwargs.get('async'):
             return self.cases_delete_with_http_info(id, **kwargs)  # noqa: E501
         else:
             (data) = self.cases_delete_with_http_info(id, **kwargs)  # noqa: E501
@@ -159,11 +159,11 @@ class CasesApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.cases_delete_with_http_info(id, async_req=True)
+        asynchronous HTTP request, please pass async=True
+        >>> thread = api.cases_delete_with_http_info(id, async=True)
         >>> result = thread.get()
 
-        :param async_req bool
+        :param async bool
         :param int id: A unique integer value identifying this case. (required)
         :return: None
                  If the method is called asynchronously,
@@ -171,7 +171,7 @@ class CasesApi(object):
         """
 
         all_params = ['id']  # noqa: E501
-        all_params.append('async_req')
+        all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -225,7 +225,7 @@ class CasesApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
+            async=params.get('async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -236,11 +236,11 @@ class CasesApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.cases_list(async_req=True)
+        asynchronous HTTP request, please pass async=True
+        >>> thread = api.cases_list(async=True)
         >>> result = thread.get()
 
-        :param async_req bool
+        :param async bool
         :param str ordering: Which field to use when ordering the results.
         :param str _date: 
         :param str slug: 
@@ -258,7 +258,7 @@ class CasesApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
+        if kwargs.get('async'):
             return self.cases_list_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.cases_list_with_http_info(**kwargs)  # noqa: E501
@@ -269,11 +269,11 @@ class CasesApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.cases_list_with_http_info(async_req=True)
+        asynchronous HTTP request, please pass async=True
+        >>> thread = api.cases_list_with_http_info(async=True)
         >>> result = thread.get()
 
-        :param async_req bool
+        :param async bool
         :param str ordering: Which field to use when ordering the results.
         :param str _date: 
         :param str slug: 
@@ -292,7 +292,7 @@ class CasesApi(object):
         """
 
         all_params = ['ordering', '_date', 'slug', 'file_number', 'ecli', 'court', 'court__slug', 'court__jurisdiction', 'court__level_of_appeal', 'court__state', 'page', 'page_size']  # noqa: E501
-        all_params.append('async_req')
+        all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -364,7 +364,7 @@ class CasesApi(object):
             files=local_var_files,
             response_type='InlineResponse2002',  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
+            async=params.get('async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -375,11 +375,11 @@ class CasesApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.cases_partial_update(id, data, async_req=True)
+        asynchronous HTTP request, please pass async=True
+        >>> thread = api.cases_partial_update(id, data, async=True)
         >>> result = thread.get()
 
-        :param async_req bool
+        :param async bool
         :param int id: A unique integer value identifying this case. (required)
         :param Case data: (required)
         :return: Case
@@ -387,7 +387,7 @@ class CasesApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
+        if kwargs.get('async'):
             return self.cases_partial_update_with_http_info(id, data, **kwargs)  # noqa: E501
         else:
             (data) = self.cases_partial_update_with_http_info(id, data, **kwargs)  # noqa: E501
@@ -398,11 +398,11 @@ class CasesApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.cases_partial_update_with_http_info(id, data, async_req=True)
+        asynchronous HTTP request, please pass async=True
+        >>> thread = api.cases_partial_update_with_http_info(id, data, async=True)
         >>> result = thread.get()
 
-        :param async_req bool
+        :param async bool
         :param int id: A unique integer value identifying this case. (required)
         :param Case data: (required)
         :return: Case
@@ -411,7 +411,7 @@ class CasesApi(object):
         """
 
         all_params = ['id', 'data']  # noqa: E501
-        all_params.append('async_req')
+        all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -471,7 +471,7 @@ class CasesApi(object):
             files=local_var_files,
             response_type='Case',  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
+            async=params.get('async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -482,18 +482,18 @@ class CasesApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.cases_read(id, async_req=True)
+        asynchronous HTTP request, please pass async=True
+        >>> thread = api.cases_read(id, async=True)
         >>> result = thread.get()
 
-        :param async_req bool
+        :param async bool
         :param int id: A unique integer value identifying this case. (required)
         :return: Case
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
+        if kwargs.get('async'):
             return self.cases_read_with_http_info(id, **kwargs)  # noqa: E501
         else:
             (data) = self.cases_read_with_http_info(id, **kwargs)  # noqa: E501
@@ -504,11 +504,11 @@ class CasesApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.cases_read_with_http_info(id, async_req=True)
+        asynchronous HTTP request, please pass async=True
+        >>> thread = api.cases_read_with_http_info(id, async=True)
         >>> result = thread.get()
 
-        :param async_req bool
+        :param async bool
         :param int id: A unique integer value identifying this case. (required)
         :return: Case
                  If the method is called asynchronously,
@@ -516,7 +516,7 @@ class CasesApi(object):
         """
 
         all_params = ['id']  # noqa: E501
-        all_params.append('async_req')
+        all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -570,7 +570,205 @@ class CasesApi(object):
             files=local_var_files,
             response_type='Case',  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
+            async=params.get('async'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def cases_search_list(self, **kwargs):  # noqa: E501
+        """cases_search_list  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async=True
+        >>> thread = api.cases_search_list(async=True)
+        >>> result = thread.get()
+
+        :param async bool
+        :param int page: A page number within the paginated result set.
+        :param int page_size: Number of results to return per page.
+        :return: InlineResponse2003
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async'):
+            return self.cases_search_list_with_http_info(**kwargs)  # noqa: E501
+        else:
+            (data) = self.cases_search_list_with_http_info(**kwargs)  # noqa: E501
+            return data
+
+    def cases_search_list_with_http_info(self, **kwargs):  # noqa: E501
+        """cases_search_list  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async=True
+        >>> thread = api.cases_search_list_with_http_info(async=True)
+        >>> result = thread.get()
+
+        :param async bool
+        :param int page: A page number within the paginated result set.
+        :param int page_size: Number of results to return per page.
+        :return: InlineResponse2003
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['page', 'page_size']  # noqa: E501
+        all_params.append('async')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method cases_search_list" % key
+                )
+            params[key] = val
+        del params['kwargs']
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+        if 'page' in params:
+            query_params.append(('page', params['page']))  # noqa: E501
+        if 'page_size' in params:
+            query_params.append(('page_size', params['page_size']))  # noqa: E501
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['api_key']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/cases/search/', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='InlineResponse2003',  # noqa: E501
+            auth_settings=auth_settings,
+            async=params.get('async'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def cases_search_read(self, id, **kwargs):  # noqa: E501
+        """cases_search_read  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async=True
+        >>> thread = api.cases_search_read(id, async=True)
+        >>> result = thread.get()
+
+        :param async bool
+        :param str id: (required)
+        :return: CaseSearch
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async'):
+            return self.cases_search_read_with_http_info(id, **kwargs)  # noqa: E501
+        else:
+            (data) = self.cases_search_read_with_http_info(id, **kwargs)  # noqa: E501
+            return data
+
+    def cases_search_read_with_http_info(self, id, **kwargs):  # noqa: E501
+        """cases_search_read  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async=True
+        >>> thread = api.cases_search_read_with_http_info(id, async=True)
+        >>> result = thread.get()
+
+        :param async bool
+        :param str id: (required)
+        :return: CaseSearch
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['id']  # noqa: E501
+        all_params.append('async')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method cases_search_read" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'id' is set
+        if ('id' not in params or
+                params['id'] is None):
+            raise ValueError("Missing the required parameter `id` when calling `cases_search_read`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'id' in params:
+            path_params['id'] = params['id']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['api_key']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/cases/search/{id}/', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='CaseSearch',  # noqa: E501
+            auth_settings=auth_settings,
+            async=params.get('async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -581,11 +779,11 @@ class CasesApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.cases_update(id, data, async_req=True)
+        asynchronous HTTP request, please pass async=True
+        >>> thread = api.cases_update(id, data, async=True)
         >>> result = thread.get()
 
-        :param async_req bool
+        :param async bool
         :param int id: A unique integer value identifying this case. (required)
         :param Case data: (required)
         :return: Case
@@ -593,7 +791,7 @@ class CasesApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
+        if kwargs.get('async'):
             return self.cases_update_with_http_info(id, data, **kwargs)  # noqa: E501
         else:
             (data) = self.cases_update_with_http_info(id, data, **kwargs)  # noqa: E501
@@ -604,11 +802,11 @@ class CasesApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.cases_update_with_http_info(id, data, async_req=True)
+        asynchronous HTTP request, please pass async=True
+        >>> thread = api.cases_update_with_http_info(id, data, async=True)
         >>> result = thread.get()
 
-        :param async_req bool
+        :param async bool
         :param int id: A unique integer value identifying this case. (required)
         :param Case data: (required)
         :return: Case
@@ -617,7 +815,7 @@ class CasesApi(object):
         """
 
         all_params = ['id', 'data']  # noqa: E501
-        all_params.append('async_req')
+        all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -677,7 +875,7 @@ class CasesApi(object):
             files=local_var_files,
             response_type='Case',  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
+            async=params.get('async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),

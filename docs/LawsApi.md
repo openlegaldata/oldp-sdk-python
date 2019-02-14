@@ -9,6 +9,8 @@ Method | HTTP request | Description
 [**laws_list**](LawsApi.md#laws_list) | **GET** /laws/ | 
 [**laws_partial_update**](LawsApi.md#laws_partial_update) | **PATCH** /laws/{id}/ | 
 [**laws_read**](LawsApi.md#laws_read) | **GET** /laws/{id}/ | 
+[**laws_search_list**](LawsApi.md#laws_search_list) | **GET** /laws/search/ | 
+[**laws_search_read**](LawsApi.md#laws_search_read) | **GET** /laws/search/{id}/ | 
 [**laws_update**](LawsApi.md#laws_update) | **PUT** /laws/{id}/ | 
 
 
@@ -29,9 +31,9 @@ from pprint import pprint
 
 # Configure API key authorization: api_key
 configuration = oldp_client.Configuration()
-configuration.api_key['api_key'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['api_key'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = oldp_client.LawsApi(oldp_client.ApiClient(configuration))
@@ -82,9 +84,9 @@ from pprint import pprint
 
 # Configure API key authorization: api_key
 configuration = oldp_client.Configuration()
-configuration.api_key['api_key'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['api_key'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = oldp_client.LawsApi(oldp_client.ApiClient(configuration))
@@ -118,7 +120,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **laws_list**
-> InlineResponse2007 laws_list(book_id=book_id, book__latest=book__latest, book__revision_date=book__revision_date, limit=limit, offset=offset)
+> InlineResponse2008 laws_list(book_id=book_id, book__latest=book__latest, book__revision_date=book__revision_date, limit=limit, offset=offset)
 
 
 
@@ -134,9 +136,9 @@ from pprint import pprint
 
 # Configure API key authorization: api_key
 configuration = oldp_client.Configuration()
-configuration.api_key['api_key'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['api_key'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = oldp_client.LawsApi(oldp_client.ApiClient(configuration))
@@ -165,7 +167,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2007**](InlineResponse2007.md)
+[**InlineResponse2008**](InlineResponse2008.md)
 
 ### Authorization
 
@@ -195,9 +197,9 @@ from pprint import pprint
 
 # Configure API key authorization: api_key
 configuration = oldp_client.Configuration()
-configuration.api_key['api_key'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['api_key'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = oldp_client.LawsApi(oldp_client.ApiClient(configuration))
@@ -250,9 +252,9 @@ from pprint import pprint
 
 # Configure API key authorization: api_key
 configuration = oldp_client.Configuration()
-configuration.api_key['api_key'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['api_key'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = oldp_client.LawsApi(oldp_client.ApiClient(configuration))
@@ -286,6 +288,114 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **laws_search_list**
+> InlineResponse2009 laws_search_list(page=page, page_size=page_size)
+
+
+
+
+
+### Example
+```python
+from __future__ import print_function
+import time
+import oldp_client
+from oldp_client.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: api_key
+configuration = oldp_client.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = oldp_client.LawsApi(oldp_client.ApiClient(configuration))
+page = 56 # int | A page number within the paginated result set. (optional)
+page_size = 56 # int | Number of results to return per page. (optional)
+
+try:
+    api_response = api_instance.laws_search_list(page=page, page_size=page_size)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling LawsApi->laws_search_list: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page** | **int**| A page number within the paginated result set. | [optional] 
+ **page_size** | **int**| Number of results to return per page. | [optional] 
+
+### Return type
+
+[**InlineResponse2009**](InlineResponse2009.md)
+
+### Authorization
+
+[api_key](../README.md#api_key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **laws_search_read**
+> LawSearch laws_search_read(id)
+
+
+
+
+
+### Example
+```python
+from __future__ import print_function
+import time
+import oldp_client
+from oldp_client.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: api_key
+configuration = oldp_client.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = oldp_client.LawsApi(oldp_client.ApiClient(configuration))
+id = 'id_example' # str | 
+
+try:
+    api_response = api_instance.laws_search_read(id)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling LawsApi->laws_search_read: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **str**|  | 
+
+### Return type
+
+[**LawSearch**](LawSearch.md)
+
+### Authorization
+
+[api_key](../README.md#api_key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **laws_update**
 > Law laws_update(id, data)
 
@@ -303,9 +413,9 @@ from pprint import pprint
 
 # Configure API key authorization: api_key
 configuration = oldp_client.Configuration()
-configuration.api_key['api_key'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['api_key'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = oldp_client.LawsApi(oldp_client.ApiClient(configuration))

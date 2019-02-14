@@ -13,3 +13,4 @@ from oldp_client.api.law_books_api import LawBooksApi
 from oldp_client.api.laws_api import LawsApi
 from oldp_client.api.states_api import StatesApi
 from oldp_client.api.token_auth_api import TokenAuthApi
+from oldp_client.api.users_api import UsersApi

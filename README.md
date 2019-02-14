@@ -52,13 +52,11 @@ from oldp_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: api_key
-configuration = oldp_client.Configuration()
-configuration.api_key['api_key'] = 'YOUR_API_KEY'
+oldp_client.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['api_key'] = 'Bearer'
-
+# oldp_client.configuration.api_key_prefix['Authorization'] = 'Bearer'
 # create an instance of the API class
-api_instance = oldp_client.AnnotationLabelsApi(oldp_client.ApiClient(configuration))
+api_instance = oldp_client.AnnotationLabelsApi()
 data = oldp_client.AnnotationLabel() # AnnotationLabel | 
 
 try:
@@ -92,25 +90,15 @@ Class | Method | HTTP request | Description
 *CasesApi* | [**cases_list**](docs/CasesApi.md#cases_list) | **GET** /cases/ | 
 *CasesApi* | [**cases_partial_update**](docs/CasesApi.md#cases_partial_update) | **PATCH** /cases/{id}/ | 
 *CasesApi* | [**cases_read**](docs/CasesApi.md#cases_read) | **GET** /cases/{id}/ | 
+*CasesApi* | [**cases_search_list**](docs/CasesApi.md#cases_search_list) | **GET** /cases/search/ | 
+*CasesApi* | [**cases_search_read**](docs/CasesApi.md#cases_search_read) | **GET** /cases/search/{id}/ | 
 *CasesApi* | [**cases_update**](docs/CasesApi.md#cases_update) | **PUT** /cases/{id}/ | 
-*CitiesApi* | [**cities_create**](docs/CitiesApi.md#cities_create) | **POST** /cities/ | 
-*CitiesApi* | [**cities_delete**](docs/CitiesApi.md#cities_delete) | **DELETE** /cities/{id}/ | 
 *CitiesApi* | [**cities_list**](docs/CitiesApi.md#cities_list) | **GET** /cities/ | 
-*CitiesApi* | [**cities_partial_update**](docs/CitiesApi.md#cities_partial_update) | **PATCH** /cities/{id}/ | 
 *CitiesApi* | [**cities_read**](docs/CitiesApi.md#cities_read) | **GET** /cities/{id}/ | 
-*CitiesApi* | [**cities_update**](docs/CitiesApi.md#cities_update) | **PUT** /cities/{id}/ | 
-*CountriesApi* | [**countries_create**](docs/CountriesApi.md#countries_create) | **POST** /countries/ | 
-*CountriesApi* | [**countries_delete**](docs/CountriesApi.md#countries_delete) | **DELETE** /countries/{id}/ | 
 *CountriesApi* | [**countries_list**](docs/CountriesApi.md#countries_list) | **GET** /countries/ | 
-*CountriesApi* | [**countries_partial_update**](docs/CountriesApi.md#countries_partial_update) | **PATCH** /countries/{id}/ | 
 *CountriesApi* | [**countries_read**](docs/CountriesApi.md#countries_read) | **GET** /countries/{id}/ | 
-*CountriesApi* | [**countries_update**](docs/CountriesApi.md#countries_update) | **PUT** /countries/{id}/ | 
-*CourtsApi* | [**courts_create**](docs/CourtsApi.md#courts_create) | **POST** /courts/ | 
-*CourtsApi* | [**courts_delete**](docs/CourtsApi.md#courts_delete) | **DELETE** /courts/{id}/ | 
 *CourtsApi* | [**courts_list**](docs/CourtsApi.md#courts_list) | **GET** /courts/ | 
-*CourtsApi* | [**courts_partial_update**](docs/CourtsApi.md#courts_partial_update) | **PATCH** /courts/{id}/ | 
 *CourtsApi* | [**courts_read**](docs/CourtsApi.md#courts_read) | **GET** /courts/{id}/ | 
-*CourtsApi* | [**courts_update**](docs/CourtsApi.md#courts_update) | **PUT** /courts/{id}/ | 
 *LawBooksApi* | [**law_books_create**](docs/LawBooksApi.md#law_books_create) | **POST** /law_books/ | 
 *LawBooksApi* | [**law_books_delete**](docs/LawBooksApi.md#law_books_delete) | **DELETE** /law_books/{id}/ | 
 *LawBooksApi* | [**law_books_list**](docs/LawBooksApi.md#law_books_list) | **GET** /law_books/ | 
@@ -122,14 +110,15 @@ Class | Method | HTTP request | Description
 *LawsApi* | [**laws_list**](docs/LawsApi.md#laws_list) | **GET** /laws/ | 
 *LawsApi* | [**laws_partial_update**](docs/LawsApi.md#laws_partial_update) | **PATCH** /laws/{id}/ | 
 *LawsApi* | [**laws_read**](docs/LawsApi.md#laws_read) | **GET** /laws/{id}/ | 
+*LawsApi* | [**laws_search_list**](docs/LawsApi.md#laws_search_list) | **GET** /laws/search/ | 
+*LawsApi* | [**laws_search_read**](docs/LawsApi.md#laws_search_read) | **GET** /laws/search/{id}/ | 
 *LawsApi* | [**laws_update**](docs/LawsApi.md#laws_update) | **PUT** /laws/{id}/ | 
-*StatesApi* | [**states_create**](docs/StatesApi.md#states_create) | **POST** /states/ | 
-*StatesApi* | [**states_delete**](docs/StatesApi.md#states_delete) | **DELETE** /states/{id}/ | 
 *StatesApi* | [**states_list**](docs/StatesApi.md#states_list) | **GET** /states/ | 
-*StatesApi* | [**states_partial_update**](docs/StatesApi.md#states_partial_update) | **PATCH** /states/{id}/ | 
 *StatesApi* | [**states_read**](docs/StatesApi.md#states_read) | **GET** /states/{id}/ | 
-*StatesApi* | [**states_update**](docs/StatesApi.md#states_update) | **PUT** /states/{id}/ | 
 *TokenAuthApi* | [**token_auth_create**](docs/TokenAuthApi.md#token_auth_create) | **POST** /token-auth/ | 
+*UsersApi* | [**users_list**](docs/UsersApi.md#users_list) | **GET** /users/ | 
+*UsersApi* | [**users_me**](docs/UsersApi.md#users_me) | **GET** /users/me/ | 
+*UsersApi* | [**users_read**](docs/UsersApi.md#users_read) | **GET** /users/{id}/ | 
 
 
 ## Documentation For Models
@@ -137,12 +126,15 @@ Class | Method | HTTP request | Description
  - [AnnotationLabel](docs/AnnotationLabel.md)
  - [Case](docs/Case.md)
  - [CaseAnnotation](docs/CaseAnnotation.md)
+ - [CaseSearch](docs/CaseSearch.md)
  - [City](docs/City.md)
  - [Country](docs/Country.md)
  - [Court](docs/Court.md)
  - [CourtMinimal](docs/CourtMinimal.md)
  - [InlineResponse200](docs/InlineResponse200.md)
  - [InlineResponse2001](docs/InlineResponse2001.md)
+ - [InlineResponse20010](docs/InlineResponse20010.md)
+ - [InlineResponse20011](docs/InlineResponse20011.md)
  - [InlineResponse2002](docs/InlineResponse2002.md)
  - [InlineResponse2003](docs/InlineResponse2003.md)
  - [InlineResponse2004](docs/InlineResponse2004.md)
@@ -150,9 +142,12 @@ Class | Method | HTTP request | Description
  - [InlineResponse2006](docs/InlineResponse2006.md)
  - [InlineResponse2007](docs/InlineResponse2007.md)
  - [InlineResponse2008](docs/InlineResponse2008.md)
+ - [InlineResponse2009](docs/InlineResponse2009.md)
  - [Law](docs/Law.md)
  - [LawBook](docs/LawBook.md)
+ - [LawSearch](docs/LawSearch.md)
  - [State](docs/State.md)
+ - [User](docs/User.md)
 
 
 ## Documentation For Authorization
@@ -161,7 +156,7 @@ Class | Method | HTTP request | Description
 ## api_key
 
 - **Type**: API key
-- **API key parameter name**: api_key
+- **API key parameter name**: Authorization
 - **Location**: HTTP header
 
 

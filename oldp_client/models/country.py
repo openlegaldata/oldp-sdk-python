@@ -147,9 +147,6 @@ class Country(object):
                 ))
             else:
                 result[attr] = value
-        if issubclass(Country, dict):
-            for key, value in self.items():
-                result[key] = value
 
         return result
 

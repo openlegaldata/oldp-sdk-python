@@ -29,9 +29,9 @@ from pprint import pprint
 
 # Configure API key authorization: api_key
 configuration = oldp_client.Configuration()
-configuration.api_key['api_key'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['api_key'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = oldp_client.LawBooksApi(oldp_client.ApiClient(configuration))
@@ -82,9 +82,9 @@ from pprint import pprint
 
 # Configure API key authorization: api_key
 configuration = oldp_client.Configuration()
-configuration.api_key['api_key'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['api_key'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = oldp_client.LawBooksApi(oldp_client.ApiClient(configuration))
@@ -118,7 +118,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **law_books_list**
-> InlineResponse2006 law_books_list(slug=slug, code=code, latest=latest, revision_date=revision_date, limit=limit, offset=offset)
+> InlineResponse2007 law_books_list(slug=slug, code=code, latest=latest, revision_date=revision_date, limit=limit, offset=offset)
 
 
 
@@ -134,9 +134,9 @@ from pprint import pprint
 
 # Configure API key authorization: api_key
 configuration = oldp_client.Configuration()
-configuration.api_key['api_key'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['api_key'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = oldp_client.LawBooksApi(oldp_client.ApiClient(configuration))
@@ -167,7 +167,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2006**](InlineResponse2006.md)
+[**InlineResponse2007**](InlineResponse2007.md)
 
 ### Authorization
 
@@ -197,9 +197,9 @@ from pprint import pprint
 
 # Configure API key authorization: api_key
 configuration = oldp_client.Configuration()
-configuration.api_key['api_key'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['api_key'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = oldp_client.LawBooksApi(oldp_client.ApiClient(configuration))
@@ -252,9 +252,9 @@ from pprint import pprint
 
 # Configure API key authorization: api_key
 configuration = oldp_client.Configuration()
-configuration.api_key['api_key'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['api_key'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = oldp_client.LawBooksApi(oldp_client.ApiClient(configuration))
@@ -305,9 +305,9 @@ from pprint import pprint
 
 # Configure API key authorization: api_key
 configuration = oldp_client.Configuration()
-configuration.api_key['api_key'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['api_key'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = oldp_client.LawBooksApi(oldp_client.ApiClient(configuration))
