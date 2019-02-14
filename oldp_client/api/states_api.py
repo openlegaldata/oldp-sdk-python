@@ -38,18 +38,18 @@ class StatesApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.states_create(data, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.states_create(data, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param State data: (required)
         :return: State
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.states_create_with_http_info(data, **kwargs)  # noqa: E501
         else:
             (data) = self.states_create_with_http_info(data, **kwargs)  # noqa: E501
@@ -60,11 +60,11 @@ class StatesApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.states_create_with_http_info(data, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.states_create_with_http_info(data, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param State data: (required)
         :return: State
                  If the method is called asynchronously,
@@ -72,7 +72,7 @@ class StatesApi(object):
         """
 
         all_params = ['data']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -126,7 +126,7 @@ class StatesApi(object):
             files=local_var_files,
             response_type='State',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -137,18 +137,18 @@ class StatesApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.states_delete(id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.states_delete(id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int id: A unique integer value identifying this state. (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.states_delete_with_http_info(id, **kwargs)  # noqa: E501
         else:
             (data) = self.states_delete_with_http_info(id, **kwargs)  # noqa: E501
@@ -159,11 +159,11 @@ class StatesApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.states_delete_with_http_info(id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.states_delete_with_http_info(id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int id: A unique integer value identifying this state. (required)
         :return: None
                  If the method is called asynchronously,
@@ -171,7 +171,7 @@ class StatesApi(object):
         """
 
         all_params = ['id']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -225,7 +225,7 @@ class StatesApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -236,11 +236,11 @@ class StatesApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.states_list(async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.states_list(async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str country_id: 
         :param int limit: Number of results to return per page.
         :param int offset: The initial index from which to return the results.
@@ -249,7 +249,7 @@ class StatesApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.states_list_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.states_list_with_http_info(**kwargs)  # noqa: E501
@@ -260,11 +260,11 @@ class StatesApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.states_list_with_http_info(async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.states_list_with_http_info(async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str country_id: 
         :param int limit: Number of results to return per page.
         :param int offset: The initial index from which to return the results.
@@ -274,7 +274,7 @@ class StatesApi(object):
         """
 
         all_params = ['country_id', 'limit', 'offset']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -328,7 +328,7 @@ class StatesApi(object):
             files=local_var_files,
             response_type='InlineResponse2008',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -339,11 +339,11 @@ class StatesApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.states_partial_update(id, data, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.states_partial_update(id, data, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int id: A unique integer value identifying this state. (required)
         :param State data: (required)
         :return: State
@@ -351,7 +351,7 @@ class StatesApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.states_partial_update_with_http_info(id, data, **kwargs)  # noqa: E501
         else:
             (data) = self.states_partial_update_with_http_info(id, data, **kwargs)  # noqa: E501
@@ -362,11 +362,11 @@ class StatesApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.states_partial_update_with_http_info(id, data, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.states_partial_update_with_http_info(id, data, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int id: A unique integer value identifying this state. (required)
         :param State data: (required)
         :return: State
@@ -375,7 +375,7 @@ class StatesApi(object):
         """
 
         all_params = ['id', 'data']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -435,7 +435,7 @@ class StatesApi(object):
             files=local_var_files,
             response_type='State',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -446,18 +446,18 @@ class StatesApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.states_read(id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.states_read(id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int id: A unique integer value identifying this state. (required)
         :return: State
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.states_read_with_http_info(id, **kwargs)  # noqa: E501
         else:
             (data) = self.states_read_with_http_info(id, **kwargs)  # noqa: E501
@@ -468,11 +468,11 @@ class StatesApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.states_read_with_http_info(id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.states_read_with_http_info(id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int id: A unique integer value identifying this state. (required)
         :return: State
                  If the method is called asynchronously,
@@ -480,7 +480,7 @@ class StatesApi(object):
         """
 
         all_params = ['id']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -534,7 +534,7 @@ class StatesApi(object):
             files=local_var_files,
             response_type='State',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -545,11 +545,11 @@ class StatesApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.states_update(id, data, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.states_update(id, data, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int id: A unique integer value identifying this state. (required)
         :param State data: (required)
         :return: State
@@ -557,7 +557,7 @@ class StatesApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.states_update_with_http_info(id, data, **kwargs)  # noqa: E501
         else:
             (data) = self.states_update_with_http_info(id, data, **kwargs)  # noqa: E501
@@ -568,11 +568,11 @@ class StatesApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.states_update_with_http_info(id, data, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.states_update_with_http_info(id, data, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int id: A unique integer value identifying this state. (required)
         :param State data: (required)
         :return: State
@@ -581,7 +581,7 @@ class StatesApi(object):
         """
 
         all_params = ['id', 'data']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -641,7 +641,7 @@ class StatesApi(object):
             files=local_var_files,
             response_type='State',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),

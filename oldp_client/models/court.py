@@ -295,8 +295,8 @@ class Court(object):
             raise ValueError("Invalid value for `slug`, must not be `None`")  # noqa: E501
         if slug is not None and len(slug) > 60:
             raise ValueError("Invalid value for `slug`, length must be less than or equal to `60`")  # noqa: E501
-        if slug is not None and not re.search('^[-a-zA-Z0-9_]+$', slug):  # noqa: E501
-            raise ValueError("Invalid value for `slug`, must be a follow pattern or equal to `/^[-a-zA-Z0-9_]+$/`")  # noqa: E501
+        if slug is not None and not re.search(r'^[-a-zA-Z0-9_]+$', slug):  # noqa: E501
+            raise ValueError(r"Invalid value for `slug`, must be a follow pattern or equal to `/^[-a-zA-Z0-9_]+$/`")  # noqa: E501
 
         self._slug = slug
 
@@ -563,6 +563,9 @@ class Court(object):
                 ))
             else:
                 result[attr] = value
+        if issubclass(Court, dict):
+            for key, value in self.items():
+                result[key] = value
 
         return result
 
