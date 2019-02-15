@@ -135,7 +135,7 @@ class UsersApi(object):
     def users_me(self, **kwargs):  # noqa: E501
         """users_me  # noqa: E501
 
-        API endpoint that allows a user's profile to be viewed or edited.  # noqa: E501
+        Show current user (useful for verifying API key)  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.users_me(async_req=True)
@@ -158,7 +158,7 @@ class UsersApi(object):
     def users_me_with_http_info(self, **kwargs):  # noqa: E501
         """users_me  # noqa: E501
 
-        API endpoint that allows a user's profile to be viewed or edited.  # noqa: E501
+        Show current user (useful for verifying API key)  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.users_me_with_http_info(async_req=True)

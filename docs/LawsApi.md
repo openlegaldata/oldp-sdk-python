@@ -10,7 +10,6 @@ Method | HTTP request | Description
 [**laws_partial_update**](LawsApi.md#laws_partial_update) | **PATCH** /laws/{id}/ | 
 [**laws_read**](LawsApi.md#laws_read) | **GET** /laws/{id}/ | 
 [**laws_search_list**](LawsApi.md#laws_search_list) | **GET** /laws/search/ | 
-[**laws_search_read**](LawsApi.md#laws_search_read) | **GET** /laws/search/{id}/ | 
 [**laws_update**](LawsApi.md#laws_update) | **PUT** /laws/{id}/ | 
 
 
@@ -289,11 +288,11 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **laws_search_list**
-> InlineResponse2009 laws_search_list(page=page, page_size=page_size)
+> InlineResponse2009 laws_search_list(text, facet_model_name=facet_model_name, book_code=book_code, page=page, page_size=page_size)
 
 
 
-
+Search view
 
 ### Example
 ```python
@@ -311,11 +310,14 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = oldp_client.LawsApi(oldp_client.ApiClient(configuration))
+text = 'text_example' # str | Search query on text content (Lucence syntax support).
+facet_model_name = 'facet_model_name_example' # str | facet_model_name (optional)
+book_code = 'book_code_example' # str | book_code (optional)
 page = 56 # int | A page number within the paginated result set. (optional)
 page_size = 56 # int | Number of results to return per page. (optional)
 
 try:
-    api_response = api_instance.laws_search_list(page=page, page_size=page_size)
+    api_response = api_instance.laws_search_list(text, facet_model_name=facet_model_name, book_code=book_code, page=page, page_size=page_size)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling LawsApi->laws_search_list: %s\n" % e)
@@ -325,65 +327,15 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **text** | **str**| Search query on text content (Lucence syntax support). | 
+ **facet_model_name** | **str**| facet_model_name | [optional] 
+ **book_code** | **str**| book_code | [optional] 
  **page** | **int**| A page number within the paginated result set. | [optional] 
  **page_size** | **int**| Number of results to return per page. | [optional] 
 
 ### Return type
 
 [**InlineResponse2009**](InlineResponse2009.md)
-
-### Authorization
-
-[api_key](../README.md#api_key)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **laws_search_read**
-> LawSearch laws_search_read(id)
-
-
-
-
-
-### Example
-```python
-from __future__ import print_function
-import time
-import oldp_client
-from oldp_client.rest import ApiException
-from pprint import pprint
-
-# Configure API key authorization: api_key
-configuration = oldp_client.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# create an instance of the API class
-api_instance = oldp_client.LawsApi(oldp_client.ApiClient(configuration))
-id = 'id_example' # str | 
-
-try:
-    api_response = api_instance.laws_search_read(id)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling LawsApi->laws_search_read: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **str**|  | 
-
-### Return type
-
-[**LawSearch**](LawSearch.md)
 
 ### Authorization
 

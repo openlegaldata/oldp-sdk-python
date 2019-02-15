@@ -69,7 +69,7 @@ Name | Type | Description  | Notes
 
 
 
-API endpoint that allows a user's profile to be viewed or edited.
+Show current user (useful for verifying API key)
 
 ### Example
 ```python

@@ -93,7 +93,6 @@ Class | Method | HTTP request | Description
 *CasesApi* | [**cases_partial_update**](docs/CasesApi.md#cases_partial_update) | **PATCH** /cases/{id}/ | 
 *CasesApi* | [**cases_read**](docs/CasesApi.md#cases_read) | **GET** /cases/{id}/ | 
 *CasesApi* | [**cases_search_list**](docs/CasesApi.md#cases_search_list) | **GET** /cases/search/ | 
-*CasesApi* | [**cases_search_read**](docs/CasesApi.md#cases_search_read) | **GET** /cases/search/{id}/ | 
 *CasesApi* | [**cases_update**](docs/CasesApi.md#cases_update) | **PUT** /cases/{id}/ | 
 *CitiesApi* | [**cities_list**](docs/CitiesApi.md#cities_list) | **GET** /cities/ | 
 *CitiesApi* | [**cities_read**](docs/CitiesApi.md#cities_read) | **GET** /cities/{id}/ | 
@@ -113,7 +112,6 @@ Class | Method | HTTP request | Description
 *LawsApi* | [**laws_partial_update**](docs/LawsApi.md#laws_partial_update) | **PATCH** /laws/{id}/ | 
 *LawsApi* | [**laws_read**](docs/LawsApi.md#laws_read) | **GET** /laws/{id}/ | 
 *LawsApi* | [**laws_search_list**](docs/LawsApi.md#laws_search_list) | **GET** /laws/search/ | 
-*LawsApi* | [**laws_search_read**](docs/LawsApi.md#laws_search_read) | **GET** /laws/search/{id}/ | 
 *LawsApi* | [**laws_update**](docs/LawsApi.md#laws_update) | **PUT** /laws/{id}/ | 
 *StatesApi* | [**states_list**](docs/StatesApi.md#states_list) | **GET** /states/ | 
 *StatesApi* | [**states_read**](docs/StatesApi.md#states_read) | **GET** /states/{id}/ | 

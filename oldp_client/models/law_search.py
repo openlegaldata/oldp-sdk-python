@@ -31,57 +31,34 @@ class LawSearch(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'book_code': 'str',
         'title': 'str',
         'text': 'str',
+        'book_code': 'str',
         'id': 'str'
     }
 
     attribute_map = {
-        'book_code': 'book_code',
         'title': 'title',
         'text': 'text',
+        'book_code': 'book_code',
         'id': 'id'
     }
 
-    def __init__(self, book_code=None, title=None, text=None, id=None):  # noqa: E501
+    def __init__(self, title=None, text=None, book_code=None, id=None):  # noqa: E501
         """LawSearch - a model defined in Swagger"""  # noqa: E501
 
-        self._book_code = None
         self._title = None
         self._text = None
+        self._book_code = None
         self._id = None
         self.discriminator = None
 
-        self.book_code = book_code
         if title is not None:
             self.title = title
         self.text = text
+        self.book_code = book_code
         if id is not None:
             self.id = id
-
-    @property
-    def book_code(self):
-        """Gets the book_code of this LawSearch.  # noqa: E501
-
-
-        :return: The book_code of this LawSearch.  # noqa: E501
-        :rtype: str
-        """
-        return self._book_code
-
-    @book_code.setter
-    def book_code(self, book_code):
-        """Sets the book_code of this LawSearch.
-
-
-        :param book_code: The book_code of this LawSearch.  # noqa: E501
-        :type: str
-        """
-        if book_code is None:
-            raise ValueError("Invalid value for `book_code`, must not be `None`")  # noqa: E501
-
-        self._book_code = book_code
 
     @property
     def title(self):
@@ -130,6 +107,29 @@ class LawSearch(object):
             raise ValueError("Invalid value for `text`, must not be `None`")  # noqa: E501
 
         self._text = text
+
+    @property
+    def book_code(self):
+        """Gets the book_code of this LawSearch.  # noqa: E501
+
+
+        :return: The book_code of this LawSearch.  # noqa: E501
+        :rtype: str
+        """
+        return self._book_code
+
+    @book_code.setter
+    def book_code(self, book_code):
+        """Sets the book_code of this LawSearch.
+
+
+        :param book_code: The book_code of this LawSearch.  # noqa: E501
+        :type: str
+        """
+        if book_code is None:
+            raise ValueError("Invalid value for `book_code`, must not be `None`")  # noqa: E501
+
+        self._book_code = book_code
 
     @property
     def id(self):
