@@ -16,7 +16,7 @@ import re  # noqa: F401
 
 import six
 
-from oldp_client.models.case import Case  # noqa: F401,E501
+from oldp_client.models.case_marker import CaseMarker  # noqa: F401,E501
 
 
 class InlineResponse2002(object):
@@ -36,7 +36,7 @@ class InlineResponse2002(object):
         'count': 'int',
         'next': 'str',
         'previous': 'str',
-        'results': 'list[Case]'
+        'results': 'list[CaseMarker]'
     }
 
     attribute_map = {
@@ -133,7 +133,7 @@ class InlineResponse2002(object):
 
 
         :return: The results of this InlineResponse2002.  # noqa: E501
-        :rtype: list[Case]
+        :rtype: list[CaseMarker]
         """
         return self._results
 
@@ -143,7 +143,7 @@ class InlineResponse2002(object):
 
 
         :param results: The results of this InlineResponse2002.  # noqa: E501
-        :type: list[Case]
+        :type: list[CaseMarker]
         """
         if results is None:
             raise ValueError("Invalid value for `results`, must not be `None`")  # noqa: E501

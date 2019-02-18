@@ -31,59 +31,34 @@ class LawSearch(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'title': 'str',
         'text': 'str',
         'book_code': 'str',
+        'title': 'str',
         'id': 'str'
     }
 
     attribute_map = {
-        'title': 'title',
         'text': 'text',
         'book_code': 'book_code',
+        'title': 'title',
         'id': 'id'
     }
 
-    def __init__(self, title=None, text=None, book_code=None, id=None):  # noqa: E501
+    def __init__(self, text=None, book_code=None, title=None, id=None):  # noqa: E501
         """LawSearch - a model defined in Swagger"""  # noqa: E501
 
-        self._title = None
         self._text = None
         self._book_code = None
+        self._title = None
         self._id = None
         self.discriminator = None
 
-        if title is not None:
-            self.title = title
         self.text = text
         self.book_code = book_code
+        if title is not None:
+            self.title = title
         if id is not None:
             self.id = id
-
-    @property
-    def title(self):
-        """Gets the title of this LawSearch.  # noqa: E501
-
-        Verbose title of law  # noqa: E501
-
-        :return: The title of this LawSearch.  # noqa: E501
-        :rtype: str
-        """
-        return self._title
-
-    @title.setter
-    def title(self, title):
-        """Sets the title of this LawSearch.
-
-        Verbose title of law  # noqa: E501
-
-        :param title: The title of this LawSearch.  # noqa: E501
-        :type: str
-        """
-        if title is not None and len(title) > 200:
-            raise ValueError("Invalid value for `title`, length must be less than or equal to `200`")  # noqa: E501
-
-        self._title = title
 
     @property
     def text(self):
@@ -130,6 +105,31 @@ class LawSearch(object):
             raise ValueError("Invalid value for `book_code`, must not be `None`")  # noqa: E501
 
         self._book_code = book_code
+
+    @property
+    def title(self):
+        """Gets the title of this LawSearch.  # noqa: E501
+
+        Verbose title of law  # noqa: E501
+
+        :return: The title of this LawSearch.  # noqa: E501
+        :rtype: str
+        """
+        return self._title
+
+    @title.setter
+    def title(self, title):
+        """Sets the title of this LawSearch.
+
+        Verbose title of law  # noqa: E501
+
+        :param title: The title of this LawSearch.  # noqa: E501
+        :type: str
+        """
+        if title is not None and len(title) > 200:
+            raise ValueError("Invalid value for `title`, length must be less than or equal to `200`")  # noqa: E501
+
+        self._title = title
 
     @property
     def id(self):

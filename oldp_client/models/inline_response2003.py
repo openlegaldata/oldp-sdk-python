@@ -16,7 +16,7 @@ import re  # noqa: F401
 
 import six
 
-from oldp_client.models.case_search import CaseSearch  # noqa: F401,E501
+from oldp_client.models.case import Case  # noqa: F401,E501
 
 
 class InlineResponse2003(object):
@@ -36,7 +36,7 @@ class InlineResponse2003(object):
         'count': 'int',
         'next': 'str',
         'previous': 'str',
-        'results': 'list[CaseSearch]'
+        'results': 'list[Case]'
     }
 
     attribute_map = {
@@ -133,7 +133,7 @@ class InlineResponse2003(object):
 
 
         :return: The results of this InlineResponse2003.  # noqa: E501
-        :rtype: list[CaseSearch]
+        :rtype: list[Case]
         """
         return self._results
 
@@ -143,7 +143,7 @@ class InlineResponse2003(object):
 
 
         :param results: The results of this InlineResponse2003.  # noqa: E501
-        :type: list[CaseSearch]
+        :type: list[Case]
         """
         if results is None:
             raise ValueError("Invalid value for `results`, must not be `None`")  # noqa: E501

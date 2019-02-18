@@ -18,6 +18,7 @@ from __future__ import absolute_import
 # import apis into sdk package
 from oldp_client.api.annotation_labels_api import AnnotationLabelsApi
 from oldp_client.api.case_annotations_api import CaseAnnotationsApi
+from oldp_client.api.case_markers_api import CaseMarkersApi
 from oldp_client.api.cases_api import CasesApi
 from oldp_client.api.cities_api import CitiesApi
 from oldp_client.api.countries_api import CountriesApi
@@ -35,6 +36,7 @@ from oldp_client.configuration import Configuration
 from oldp_client.models.annotation_label import AnnotationLabel
 from oldp_client.models.case import Case
 from oldp_client.models.case_annotation import CaseAnnotation
+from oldp_client.models.case_marker import CaseMarker
 from oldp_client.models.case_search import CaseSearch
 from oldp_client.models.city import City
 from oldp_client.models.country import Country
@@ -44,6 +46,7 @@ from oldp_client.models.inline_response200 import InlineResponse200
 from oldp_client.models.inline_response2001 import InlineResponse2001
 from oldp_client.models.inline_response20010 import InlineResponse20010
 from oldp_client.models.inline_response20011 import InlineResponse20011
+from oldp_client.models.inline_response20012 import InlineResponse20012
 from oldp_client.models.inline_response2002 import InlineResponse2002
 from oldp_client.models.inline_response2003 import InlineResponse2003
 from oldp_client.models.inline_response2004 import InlineResponse2004

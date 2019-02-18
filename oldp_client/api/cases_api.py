@@ -253,7 +253,7 @@ class CasesApi(object):
         :param str court__state: 
         :param int page: A page number within the paginated result set.
         :param int page_size: Number of results to return per page.
-        :return: InlineResponse2002
+        :return: InlineResponse2003
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -286,7 +286,7 @@ class CasesApi(object):
         :param str court__state: 
         :param int page: A page number within the paginated result set.
         :param int page_size: Number of results to return per page.
-        :return: InlineResponse2002
+        :return: InlineResponse2003
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -362,7 +362,7 @@ class CasesApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse2002',  # noqa: E501
+            response_type='InlineResponse2003',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -587,15 +587,15 @@ class CasesApi(object):
 
         :param async_req bool
         :param str text: Search query on text content (Lucence syntax support). (required)
+        :param str facet_model_name: facet_model_name
         :param str court_level_of_appeal: court_level_of_appeal
-        :param str court_jurisdiction: court_jurisdiction
         :param str _date: date
         :param str decision_type: decision_type
         :param str court: court
-        :param str facet_model_name: facet_model_name
+        :param str court_jurisdiction: court_jurisdiction
         :param int page: A page number within the paginated result set.
         :param int page_size: Number of results to return per page.
-        :return: InlineResponse2003
+        :return: InlineResponse2004
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -617,20 +617,20 @@ class CasesApi(object):
 
         :param async_req bool
         :param str text: Search query on text content (Lucence syntax support). (required)
+        :param str facet_model_name: facet_model_name
         :param str court_level_of_appeal: court_level_of_appeal
-        :param str court_jurisdiction: court_jurisdiction
         :param str _date: date
         :param str decision_type: decision_type
         :param str court: court
-        :param str facet_model_name: facet_model_name
+        :param str court_jurisdiction: court_jurisdiction
         :param int page: A page number within the paginated result set.
         :param int page_size: Number of results to return per page.
-        :return: InlineResponse2003
+        :return: InlineResponse2004
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['text', 'court_level_of_appeal', 'court_jurisdiction', '_date', 'decision_type', 'court', 'facet_model_name', 'page', 'page_size']  # noqa: E501
+        all_params = ['text', 'facet_model_name', 'court_level_of_appeal', '_date', 'decision_type', 'court', 'court_jurisdiction', 'page', 'page_size']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -657,18 +657,18 @@ class CasesApi(object):
         query_params = []
         if 'text' in params:
             query_params.append(('text', params['text']))  # noqa: E501
+        if 'facet_model_name' in params:
+            query_params.append(('facet_model_name', params['facet_model_name']))  # noqa: E501
         if 'court_level_of_appeal' in params:
             query_params.append(('court_level_of_appeal', params['court_level_of_appeal']))  # noqa: E501
-        if 'court_jurisdiction' in params:
-            query_params.append(('court_jurisdiction', params['court_jurisdiction']))  # noqa: E501
         if '_date' in params:
             query_params.append(('date', params['_date']))  # noqa: E501
         if 'decision_type' in params:
             query_params.append(('decision_type', params['decision_type']))  # noqa: E501
         if 'court' in params:
             query_params.append(('court', params['court']))  # noqa: E501
-        if 'facet_model_name' in params:
-            query_params.append(('facet_model_name', params['facet_model_name']))  # noqa: E501
+        if 'court_jurisdiction' in params:
+            query_params.append(('court_jurisdiction', params['court_jurisdiction']))  # noqa: E501
         if 'page' in params:
             query_params.append(('page', params['page']))  # noqa: E501
         if 'page_size' in params:
@@ -699,7 +699,7 @@ class CasesApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse2003',  # noqa: E501
+            response_type='InlineResponse2004',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),

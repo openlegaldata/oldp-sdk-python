@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **courts_list**
-> InlineResponse2006 courts_list(court_type=court_type, slug=slug, code=code, state_id=state_id, city_id=city_id, limit=limit, offset=offset)
+> InlineResponse2007 courts_list(court_type=court_type, slug=slug, code=code, state_id=state_id, city_id=city_id, limit=limit, offset=offset)
 
 
 
@@ -60,7 +60,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2006**](InlineResponse2006.md)
+[**InlineResponse2007**](InlineResponse2007.md)
 
 ### Authorization
 

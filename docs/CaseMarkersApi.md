@@ -1,19 +1,19 @@
-# oldp_client.LawBooksApi
+# oldp_client.CaseMarkersApi
 
 All URIs are relative to *https://de.openlegaldata.io/api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**law_books_create**](LawBooksApi.md#law_books_create) | **POST** /law_books/ | 
-[**law_books_delete**](LawBooksApi.md#law_books_delete) | **DELETE** /law_books/{id}/ | 
-[**law_books_list**](LawBooksApi.md#law_books_list) | **GET** /law_books/ | 
-[**law_books_partial_update**](LawBooksApi.md#law_books_partial_update) | **PATCH** /law_books/{id}/ | 
-[**law_books_read**](LawBooksApi.md#law_books_read) | **GET** /law_books/{id}/ | 
-[**law_books_update**](LawBooksApi.md#law_books_update) | **PUT** /law_books/{id}/ | 
+[**case_markers_create**](CaseMarkersApi.md#case_markers_create) | **POST** /case_markers/ | 
+[**case_markers_delete**](CaseMarkersApi.md#case_markers_delete) | **DELETE** /case_markers/{id}/ | 
+[**case_markers_list**](CaseMarkersApi.md#case_markers_list) | **GET** /case_markers/ | 
+[**case_markers_partial_update**](CaseMarkersApi.md#case_markers_partial_update) | **PATCH** /case_markers/{id}/ | 
+[**case_markers_read**](CaseMarkersApi.md#case_markers_read) | **GET** /case_markers/{id}/ | 
+[**case_markers_update**](CaseMarkersApi.md#case_markers_update) | **PUT** /case_markers/{id}/ | 
 
 
-# **law_books_create**
-> LawBook law_books_create(data)
+# **case_markers_create**
+> CaseMarker case_markers_create(data)
 
 
 
@@ -34,25 +34,25 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = oldp_client.LawBooksApi(oldp_client.ApiClient(configuration))
-data = oldp_client.LawBook() # LawBook | 
+api_instance = oldp_client.CaseMarkersApi(oldp_client.ApiClient(configuration))
+data = oldp_client.CaseMarker() # CaseMarker | 
 
 try:
-    api_response = api_instance.law_books_create(data)
+    api_response = api_instance.case_markers_create(data)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling LawBooksApi->law_books_create: %s\n" % e)
+    print("Exception when calling CaseMarkersApi->case_markers_create: %s\n" % e)
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **data** | [**LawBook**](LawBook.md)|  | 
+ **data** | [**CaseMarker**](CaseMarker.md)|  | 
 
 ### Return type
 
-[**LawBook**](LawBook.md)
+[**CaseMarker**](CaseMarker.md)
 
 ### Authorization
 
@@ -65,8 +65,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **law_books_delete**
-> law_books_delete(id)
+# **case_markers_delete**
+> case_markers_delete(id)
 
 
 
@@ -87,20 +87,20 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = oldp_client.LawBooksApi(oldp_client.ApiClient(configuration))
-id = 56 # int | A unique integer value identifying this law book.
+api_instance = oldp_client.CaseMarkersApi(oldp_client.ApiClient(configuration))
+id = 56 # int | A unique integer value identifying this case marker.
 
 try:
-    api_instance.law_books_delete(id)
+    api_instance.case_markers_delete(id)
 except ApiException as e:
-    print("Exception when calling LawBooksApi->law_books_delete: %s\n" % e)
+    print("Exception when calling CaseMarkersApi->case_markers_delete: %s\n" % e)
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this law book. | 
+ **id** | **int**| A unique integer value identifying this case marker. | 
 
 ### Return type
 
@@ -117,8 +117,8 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **law_books_list**
-> InlineResponse2008 law_books_list(slug=slug, code=code, latest=latest, revision_date=revision_date, limit=limit, offset=offset)
+# **case_markers_list**
+> InlineResponse2002 case_markers_list(belongs_to=belongs_to, label=label, limit=limit, offset=offset)
 
 
 
@@ -139,35 +139,31 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = oldp_client.LawBooksApi(oldp_client.ApiClient(configuration))
-slug = 'slug_example' # str |  (optional)
-code = 'code_example' # str |  (optional)
-latest = 'latest_example' # str |  (optional)
-revision_date = 'revision_date_example' # str |  (optional)
+api_instance = oldp_client.CaseMarkersApi(oldp_client.ApiClient(configuration))
+belongs_to = 8.14 # float |  (optional)
+label = 8.14 # float |  (optional)
 limit = 56 # int | Number of results to return per page. (optional)
 offset = 56 # int | The initial index from which to return the results. (optional)
 
 try:
-    api_response = api_instance.law_books_list(slug=slug, code=code, latest=latest, revision_date=revision_date, limit=limit, offset=offset)
+    api_response = api_instance.case_markers_list(belongs_to=belongs_to, label=label, limit=limit, offset=offset)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling LawBooksApi->law_books_list: %s\n" % e)
+    print("Exception when calling CaseMarkersApi->case_markers_list: %s\n" % e)
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **slug** | **str**|  | [optional] 
- **code** | **str**|  | [optional] 
- **latest** | **str**|  | [optional] 
- **revision_date** | **str**|  | [optional] 
+ **belongs_to** | **float**|  | [optional] 
+ **label** | **float**|  | [optional] 
  **limit** | **int**| Number of results to return per page. | [optional] 
  **offset** | **int**| The initial index from which to return the results. | [optional] 
 
 ### Return type
 
-[**InlineResponse2008**](InlineResponse2008.md)
+[**InlineResponse2002**](InlineResponse2002.md)
 
 ### Authorization
 
@@ -180,8 +176,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **law_books_partial_update**
-> LawBook law_books_partial_update(id, data)
+# **case_markers_partial_update**
+> CaseMarker case_markers_partial_update(id, data)
 
 
 
@@ -202,27 +198,27 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = oldp_client.LawBooksApi(oldp_client.ApiClient(configuration))
-id = 56 # int | A unique integer value identifying this law book.
-data = oldp_client.LawBook() # LawBook | 
+api_instance = oldp_client.CaseMarkersApi(oldp_client.ApiClient(configuration))
+id = 56 # int | A unique integer value identifying this case marker.
+data = oldp_client.CaseMarker() # CaseMarker | 
 
 try:
-    api_response = api_instance.law_books_partial_update(id, data)
+    api_response = api_instance.case_markers_partial_update(id, data)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling LawBooksApi->law_books_partial_update: %s\n" % e)
+    print("Exception when calling CaseMarkersApi->case_markers_partial_update: %s\n" % e)
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this law book. | 
- **data** | [**LawBook**](LawBook.md)|  | 
+ **id** | **int**| A unique integer value identifying this case marker. | 
+ **data** | [**CaseMarker**](CaseMarker.md)|  | 
 
 ### Return type
 
-[**LawBook**](LawBook.md)
+[**CaseMarker**](CaseMarker.md)
 
 ### Authorization
 
@@ -235,8 +231,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **law_books_read**
-> LawBook law_books_read(id)
+# **case_markers_read**
+> CaseMarker case_markers_read(id)
 
 
 
@@ -257,25 +253,25 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = oldp_client.LawBooksApi(oldp_client.ApiClient(configuration))
-id = 56 # int | A unique integer value identifying this law book.
+api_instance = oldp_client.CaseMarkersApi(oldp_client.ApiClient(configuration))
+id = 56 # int | A unique integer value identifying this case marker.
 
 try:
-    api_response = api_instance.law_books_read(id)
+    api_response = api_instance.case_markers_read(id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling LawBooksApi->law_books_read: %s\n" % e)
+    print("Exception when calling CaseMarkersApi->case_markers_read: %s\n" % e)
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this law book. | 
+ **id** | **int**| A unique integer value identifying this case marker. | 
 
 ### Return type
 
-[**LawBook**](LawBook.md)
+[**CaseMarker**](CaseMarker.md)
 
 ### Authorization
 
@@ -288,8 +284,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **law_books_update**
-> LawBook law_books_update(id, data)
+# **case_markers_update**
+> CaseMarker case_markers_update(id, data)
 
 
 
@@ -310,27 +306,27 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = oldp_client.LawBooksApi(oldp_client.ApiClient(configuration))
-id = 56 # int | A unique integer value identifying this law book.
-data = oldp_client.LawBook() # LawBook | 
+api_instance = oldp_client.CaseMarkersApi(oldp_client.ApiClient(configuration))
+id = 56 # int | A unique integer value identifying this case marker.
+data = oldp_client.CaseMarker() # CaseMarker | 
 
 try:
-    api_response = api_instance.law_books_update(id, data)
+    api_response = api_instance.case_markers_update(id, data)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling LawBooksApi->law_books_update: %s\n" % e)
+    print("Exception when calling CaseMarkersApi->case_markers_update: %s\n" % e)
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this law book. | 
- **data** | [**LawBook**](LawBook.md)|  | 
+ **id** | **int**| A unique integer value identifying this case marker. | 
+ **data** | [**CaseMarker**](CaseMarker.md)|  | 
 
 ### Return type
 
-[**LawBook**](LawBook.md)
+[**CaseMarker**](CaseMarker.md)
 
 ### Authorization
 

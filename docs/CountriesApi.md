@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **countries_list**
-> InlineResponse2005 countries_list(code=code, limit=limit, offset=offset)
+> InlineResponse2006 countries_list(code=code, limit=limit, offset=offset)
 
 
 
@@ -52,7 +52,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2005**](InlineResponse2005.md)
+[**InlineResponse2006**](InlineResponse2006.md)
 
 ### Authorization
 

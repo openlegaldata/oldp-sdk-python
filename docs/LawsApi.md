@@ -119,7 +119,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **laws_list**
-> InlineResponse2008 laws_list(book_id=book_id, book__latest=book__latest, book__revision_date=book__revision_date, limit=limit, offset=offset)
+> InlineResponse2009 laws_list(book_id=book_id, book__latest=book__latest, book__revision_date=book__revision_date, limit=limit, offset=offset)
 
 
 
@@ -166,7 +166,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2008**](InlineResponse2008.md)
+[**InlineResponse2009**](InlineResponse2009.md)
 
 ### Authorization
 
@@ -288,7 +288,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **laws_search_list**
-> InlineResponse2009 laws_search_list(text, facet_model_name=facet_model_name, book_code=book_code, page=page, page_size=page_size)
+> InlineResponse20010 laws_search_list(text, facet_model_name=facet_model_name, book_code=book_code, page=page, page_size=page_size)
 
 
 
@@ -335,7 +335,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2009**](InlineResponse2009.md)
+[**InlineResponse20010**](InlineResponse20010.md)
 
 ### Authorization
 

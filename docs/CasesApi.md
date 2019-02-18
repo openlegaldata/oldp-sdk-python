@@ -119,7 +119,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cases_list**
-> InlineResponse2002 cases_list(ordering=ordering, _date=_date, slug=slug, file_number=file_number, ecli=ecli, court=court, court__slug=court__slug, court__jurisdiction=court__jurisdiction, court__level_of_appeal=court__level_of_appeal, court__state=court__state, page=page, page_size=page_size)
+> InlineResponse2003 cases_list(ordering=ordering, _date=_date, slug=slug, file_number=file_number, ecli=ecli, court=court, court__slug=court__slug, court__jurisdiction=court__jurisdiction, court__level_of_appeal=court__level_of_appeal, court__state=court__state, page=page, page_size=page_size)
 
 
 
@@ -180,7 +180,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2002**](InlineResponse2002.md)
+[**InlineResponse2003**](InlineResponse2003.md)
 
 ### Authorization
 
@@ -302,7 +302,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cases_search_list**
-> InlineResponse2003 cases_search_list(text, court_level_of_appeal=court_level_of_appeal, court_jurisdiction=court_jurisdiction, _date=_date, decision_type=decision_type, court=court, facet_model_name=facet_model_name, page=page, page_size=page_size)
+> InlineResponse2004 cases_search_list(text, facet_model_name=facet_model_name, court_level_of_appeal=court_level_of_appeal, _date=_date, decision_type=decision_type, court=court, court_jurisdiction=court_jurisdiction, page=page, page_size=page_size)
 
 
 
@@ -325,17 +325,17 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = oldp_client.CasesApi(oldp_client.ApiClient(configuration))
 text = 'text_example' # str | Search query on text content (Lucence syntax support).
+facet_model_name = 'facet_model_name_example' # str | facet_model_name (optional)
 court_level_of_appeal = 'court_level_of_appeal_example' # str | court_level_of_appeal (optional)
-court_jurisdiction = 'court_jurisdiction_example' # str | court_jurisdiction (optional)
 _date = '_date_example' # str | date (optional)
 decision_type = 'decision_type_example' # str | decision_type (optional)
 court = 'court_example' # str | court (optional)
-facet_model_name = 'facet_model_name_example' # str | facet_model_name (optional)
+court_jurisdiction = 'court_jurisdiction_example' # str | court_jurisdiction (optional)
 page = 56 # int | A page number within the paginated result set. (optional)
 page_size = 56 # int | Number of results to return per page. (optional)
 
 try:
-    api_response = api_instance.cases_search_list(text, court_level_of_appeal=court_level_of_appeal, court_jurisdiction=court_jurisdiction, _date=_date, decision_type=decision_type, court=court, facet_model_name=facet_model_name, page=page, page_size=page_size)
+    api_response = api_instance.cases_search_list(text, facet_model_name=facet_model_name, court_level_of_appeal=court_level_of_appeal, _date=_date, decision_type=decision_type, court=court, court_jurisdiction=court_jurisdiction, page=page, page_size=page_size)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CasesApi->cases_search_list: %s\n" % e)
@@ -346,18 +346,18 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **text** | **str**| Search query on text content (Lucence syntax support). | 
+ **facet_model_name** | **str**| facet_model_name | [optional] 
  **court_level_of_appeal** | **str**| court_level_of_appeal | [optional] 
- **court_jurisdiction** | **str**| court_jurisdiction | [optional] 
  **_date** | **str**| date | [optional] 
  **decision_type** | **str**| decision_type | [optional] 
  **court** | **str**| court | [optional] 
- **facet_model_name** | **str**| facet_model_name | [optional] 
+ **court_jurisdiction** | **str**| court_jurisdiction | [optional] 
  **page** | **int**| A page number within the paginated result set. | [optional] 
  **page_size** | **int**| Number of results to return per page. | [optional] 
 
 ### Return type
 
-[**InlineResponse2003**](InlineResponse2003.md)
+[**InlineResponse2004**](InlineResponse2004.md)
 
 ### Authorization
 

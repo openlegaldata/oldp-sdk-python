@@ -87,6 +87,12 @@ Class | Method | HTTP request | Description
 *CaseAnnotationsApi* | [**case_annotations_partial_update**](docs/CaseAnnotationsApi.md#case_annotations_partial_update) | **PATCH** /case_annotations/{id}/ | 
 *CaseAnnotationsApi* | [**case_annotations_read**](docs/CaseAnnotationsApi.md#case_annotations_read) | **GET** /case_annotations/{id}/ | 
 *CaseAnnotationsApi* | [**case_annotations_update**](docs/CaseAnnotationsApi.md#case_annotations_update) | **PUT** /case_annotations/{id}/ | 
+*CaseMarkersApi* | [**case_markers_create**](docs/CaseMarkersApi.md#case_markers_create) | **POST** /case_markers/ | 
+*CaseMarkersApi* | [**case_markers_delete**](docs/CaseMarkersApi.md#case_markers_delete) | **DELETE** /case_markers/{id}/ | 
+*CaseMarkersApi* | [**case_markers_list**](docs/CaseMarkersApi.md#case_markers_list) | **GET** /case_markers/ | 
+*CaseMarkersApi* | [**case_markers_partial_update**](docs/CaseMarkersApi.md#case_markers_partial_update) | **PATCH** /case_markers/{id}/ | 
+*CaseMarkersApi* | [**case_markers_read**](docs/CaseMarkersApi.md#case_markers_read) | **GET** /case_markers/{id}/ | 
+*CaseMarkersApi* | [**case_markers_update**](docs/CaseMarkersApi.md#case_markers_update) | **PUT** /case_markers/{id}/ | 
 *CasesApi* | [**cases_create**](docs/CasesApi.md#cases_create) | **POST** /cases/ | 
 *CasesApi* | [**cases_delete**](docs/CasesApi.md#cases_delete) | **DELETE** /cases/{id}/ | 
 *CasesApi* | [**cases_list**](docs/CasesApi.md#cases_list) | **GET** /cases/ | 
@@ -126,6 +132,7 @@ Class | Method | HTTP request | Description
  - [AnnotationLabel](docs/AnnotationLabel.md)
  - [Case](docs/Case.md)
  - [CaseAnnotation](docs/CaseAnnotation.md)
+ - [CaseMarker](docs/CaseMarker.md)
  - [CaseSearch](docs/CaseSearch.md)
  - [City](docs/City.md)
  - [Country](docs/Country.md)
@@ -135,6 +142,7 @@ Class | Method | HTTP request | Description
  - [InlineResponse2001](docs/InlineResponse2001.md)
  - [InlineResponse20010](docs/InlineResponse20010.md)
  - [InlineResponse20011](docs/InlineResponse20011.md)
+ - [InlineResponse20012](docs/InlineResponse20012.md)
  - [InlineResponse2002](docs/InlineResponse2002.md)
  - [InlineResponse2003](docs/InlineResponse2003.md)
  - [InlineResponse2004](docs/InlineResponse2004.md)

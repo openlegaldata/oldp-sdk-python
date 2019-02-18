@@ -31,120 +31,77 @@ class CaseSearch(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'court_level_of_appeal': 'str',
-        'court_jurisdiction': 'str',
-        '_date': 'date',
+        'text': 'str',
         'slug': 'str',
+        'court_level_of_appeal': 'str',
+        '_date': 'date',
         'decision_type': 'str',
         'court': 'str',
-        'text': 'str',
+        'court_jurisdiction': 'str',
         'id': 'str'
     }
 
     attribute_map = {
-        'court_level_of_appeal': 'court_level_of_appeal',
-        'court_jurisdiction': 'court_jurisdiction',
-        '_date': 'date',
+        'text': 'text',
         'slug': 'slug',
+        'court_level_of_appeal': 'court_level_of_appeal',
+        '_date': 'date',
         'decision_type': 'decision_type',
         'court': 'court',
-        'text': 'text',
+        'court_jurisdiction': 'court_jurisdiction',
         'id': 'id'
     }
 
-    def __init__(self, court_level_of_appeal=None, court_jurisdiction=None, _date=None, slug=None, decision_type=None, court=None, text=None, id=None):  # noqa: E501
+    def __init__(self, text=None, slug=None, court_level_of_appeal=None, _date=None, decision_type=None, court=None, court_jurisdiction=None, id=None):  # noqa: E501
         """CaseSearch - a model defined in Swagger"""  # noqa: E501
 
-        self._court_level_of_appeal = None
-        self._court_jurisdiction = None
-        self.__date = None
+        self._text = None
         self._slug = None
+        self._court_level_of_appeal = None
+        self.__date = None
         self._decision_type = None
         self._court = None
-        self._text = None
+        self._court_jurisdiction = None
         self._id = None
         self.discriminator = None
 
-        self.court_level_of_appeal = court_level_of_appeal
-        self.court_jurisdiction = court_jurisdiction
+        self.text = text
+        self.slug = slug
+        if court_level_of_appeal is not None:
+            self.court_level_of_appeal = court_level_of_appeal
         if _date is not None:
             self._date = _date
-        self.slug = slug
-        self.decision_type = decision_type
+        if decision_type is not None:
+            self.decision_type = decision_type
         if court is not None:
             self.court = court
-        self.text = text
+        if court_jurisdiction is not None:
+            self.court_jurisdiction = court_jurisdiction
         if id is not None:
             self.id = id
 
     @property
-    def court_level_of_appeal(self):
-        """Gets the court_level_of_appeal of this CaseSearch.  # noqa: E501
+    def text(self):
+        """Gets the text of this CaseSearch.  # noqa: E501
 
 
-        :return: The court_level_of_appeal of this CaseSearch.  # noqa: E501
+        :return: The text of this CaseSearch.  # noqa: E501
         :rtype: str
         """
-        return self._court_level_of_appeal
+        return self._text
 
-    @court_level_of_appeal.setter
-    def court_level_of_appeal(self, court_level_of_appeal):
-        """Sets the court_level_of_appeal of this CaseSearch.
+    @text.setter
+    def text(self, text):
+        """Sets the text of this CaseSearch.
 
 
-        :param court_level_of_appeal: The court_level_of_appeal of this CaseSearch.  # noqa: E501
+        :param text: The text of this CaseSearch.  # noqa: E501
         :type: str
         """
-        if court_level_of_appeal is None:
-            raise ValueError("Invalid value for `court_level_of_appeal`, must not be `None`")  # noqa: E501
+        if text is None:
+            raise ValueError("Invalid value for `text`, must not be `None`")  # noqa: E501
 
-        self._court_level_of_appeal = court_level_of_appeal
-
-    @property
-    def court_jurisdiction(self):
-        """Gets the court_jurisdiction of this CaseSearch.  # noqa: E501
-
-
-        :return: The court_jurisdiction of this CaseSearch.  # noqa: E501
-        :rtype: str
-        """
-        return self._court_jurisdiction
-
-    @court_jurisdiction.setter
-    def court_jurisdiction(self, court_jurisdiction):
-        """Sets the court_jurisdiction of this CaseSearch.
-
-
-        :param court_jurisdiction: The court_jurisdiction of this CaseSearch.  # noqa: E501
-        :type: str
-        """
-        if court_jurisdiction is None:
-            raise ValueError("Invalid value for `court_jurisdiction`, must not be `None`")  # noqa: E501
-
-        self._court_jurisdiction = court_jurisdiction
-
-    @property
-    def _date(self):
-        """Gets the _date of this CaseSearch.  # noqa: E501
-
-        Publication date as in source  # noqa: E501
-
-        :return: The _date of this CaseSearch.  # noqa: E501
-        :rtype: date
-        """
-        return self.__date
-
-    @_date.setter
-    def _date(self, _date):
-        """Sets the _date of this CaseSearch.
-
-        Publication date as in source  # noqa: E501
-
-        :param _date: The _date of this CaseSearch.  # noqa: E501
-        :type: date
-        """
-
-        self.__date = _date
+        self._text = text
 
     @property
     def slug(self):
@@ -174,6 +131,50 @@ class CaseSearch(object):
         self._slug = slug
 
     @property
+    def court_level_of_appeal(self):
+        """Gets the court_level_of_appeal of this CaseSearch.  # noqa: E501
+
+
+        :return: The court_level_of_appeal of this CaseSearch.  # noqa: E501
+        :rtype: str
+        """
+        return self._court_level_of_appeal
+
+    @court_level_of_appeal.setter
+    def court_level_of_appeal(self, court_level_of_appeal):
+        """Sets the court_level_of_appeal of this CaseSearch.
+
+
+        :param court_level_of_appeal: The court_level_of_appeal of this CaseSearch.  # noqa: E501
+        :type: str
+        """
+
+        self._court_level_of_appeal = court_level_of_appeal
+
+    @property
+    def _date(self):
+        """Gets the _date of this CaseSearch.  # noqa: E501
+
+        Publication date as in source  # noqa: E501
+
+        :return: The _date of this CaseSearch.  # noqa: E501
+        :rtype: date
+        """
+        return self.__date
+
+    @_date.setter
+    def _date(self, _date):
+        """Sets the _date of this CaseSearch.
+
+        Publication date as in source  # noqa: E501
+
+        :param _date: The _date of this CaseSearch.  # noqa: E501
+        :type: date
+        """
+
+        self.__date = _date
+
+    @property
     def decision_type(self):
         """Gets the decision_type of this CaseSearch.  # noqa: E501
 
@@ -191,8 +192,6 @@ class CaseSearch(object):
         :param decision_type: The decision_type of this CaseSearch.  # noqa: E501
         :type: str
         """
-        if decision_type is None:
-            raise ValueError("Invalid value for `decision_type`, must not be `None`")  # noqa: E501
 
         self._decision_type = decision_type
 
@@ -220,27 +219,25 @@ class CaseSearch(object):
         self._court = court
 
     @property
-    def text(self):
-        """Gets the text of this CaseSearch.  # noqa: E501
+    def court_jurisdiction(self):
+        """Gets the court_jurisdiction of this CaseSearch.  # noqa: E501
 
 
-        :return: The text of this CaseSearch.  # noqa: E501
+        :return: The court_jurisdiction of this CaseSearch.  # noqa: E501
         :rtype: str
         """
-        return self._text
+        return self._court_jurisdiction
 
-    @text.setter
-    def text(self, text):
-        """Sets the text of this CaseSearch.
+    @court_jurisdiction.setter
+    def court_jurisdiction(self, court_jurisdiction):
+        """Sets the court_jurisdiction of this CaseSearch.
 
 
-        :param text: The text of this CaseSearch.  # noqa: E501
+        :param court_jurisdiction: The court_jurisdiction of this CaseSearch.  # noqa: E501
         :type: str
         """
-        if text is None:
-            raise ValueError("Invalid value for `text`, must not be `None`")  # noqa: E501
 
-        self._text = text
+        self._court_jurisdiction = court_jurisdiction
 
     @property
     def id(self):

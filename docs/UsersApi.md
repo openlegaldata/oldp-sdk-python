@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 # **users_list**
-> InlineResponse20011 users_list(limit=limit, offset=offset)
+> InlineResponse20012 users_list(limit=limit, offset=offset)
 
 
 
@@ -51,7 +51,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20011**](InlineResponse20011.md)
+[**InlineResponse20012**](InlineResponse20012.md)
 
 ### Authorization
 
@@ -65,7 +65,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **users_me**
-> InlineResponse20011 users_me(limit=limit, offset=offset)
+> InlineResponse20012 users_me(limit=limit, offset=offset)
 
 
 
@@ -106,7 +106,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20011**](InlineResponse20011.md)
+[**InlineResponse20012**](InlineResponse20012.md)
 
 ### Authorization
 

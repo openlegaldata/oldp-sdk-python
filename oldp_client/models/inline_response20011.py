@@ -16,7 +16,7 @@ import re  # noqa: F401
 
 import six
 
-from oldp_client.models.user import User  # noqa: F401,E501
+from oldp_client.models.state import State  # noqa: F401,E501
 
 
 class InlineResponse20011(object):
@@ -36,7 +36,7 @@ class InlineResponse20011(object):
         'count': 'int',
         'next': 'str',
         'previous': 'str',
-        'results': 'list[User]'
+        'results': 'list[State]'
     }
 
     attribute_map = {
@@ -133,7 +133,7 @@ class InlineResponse20011(object):
 
 
         :return: The results of this InlineResponse20011.  # noqa: E501
-        :rtype: list[User]
+        :rtype: list[State]
         """
         return self._results
 
@@ -143,7 +143,7 @@ class InlineResponse20011(object):
 
 
         :param results: The results of this InlineResponse20011.  # noqa: E501
-        :type: list[User]
+        :type: list[State]
         """
         if results is None:
             raise ValueError("Invalid value for `results`, must not be `None`")  # noqa: E501
