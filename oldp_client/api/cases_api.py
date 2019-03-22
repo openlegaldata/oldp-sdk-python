@@ -3,7 +3,7 @@
 """
     Open Legal Data API
 
-    With the Open Legal Data API you can access various data from the legal domain, e.g. law text or case files. The data may be used for semantic analysis or to create statistics. For more information visit our website.  # noqa: E501
+    With the Open Legal Data API you can access various data from the legal domain, e.g. law text or case files. The data may be used for semantic analysis or to create statistics. For more information visit our website. https://openlegaldata.io/  # noqa: E501
 
     OpenAPI spec version: v1
     Contact: hello@openlegaldata.io
@@ -107,7 +107,7 @@ class CasesApi(object):
             body_params = params['data']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
+            ['application/json', 'application/xml'])  # noqa: E501
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
@@ -206,7 +206,7 @@ class CasesApi(object):
         body_params = None
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
+            ['application/json', 'application/xml'])  # noqa: E501
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
@@ -242,15 +242,16 @@ class CasesApi(object):
 
         :param async_req bool
         :param str ordering: Which field to use when ordering the results.
+        :param float court: 
+        :param str court__state: 
+        :param float has_reference_to_law: 
+        :param str court__slug: 
+        :param str court__jurisdiction: 
+        :param str court__level_of_appeal: 
         :param str _date: 
         :param str slug: 
         :param str file_number: 
         :param str ecli: 
-        :param float court: 
-        :param str court__slug: 
-        :param str court__jurisdiction: 
-        :param str court__level_of_appeal: 
-        :param str court__state: 
         :param int page: A page number within the paginated result set.
         :param int page_size: Number of results to return per page.
         :return: InlineResponse2003
@@ -275,15 +276,16 @@ class CasesApi(object):
 
         :param async_req bool
         :param str ordering: Which field to use when ordering the results.
+        :param float court: 
+        :param str court__state: 
+        :param float has_reference_to_law: 
+        :param str court__slug: 
+        :param str court__jurisdiction: 
+        :param str court__level_of_appeal: 
         :param str _date: 
         :param str slug: 
         :param str file_number: 
         :param str ecli: 
-        :param float court: 
-        :param str court__slug: 
-        :param str court__jurisdiction: 
-        :param str court__level_of_appeal: 
-        :param str court__state: 
         :param int page: A page number within the paginated result set.
         :param int page_size: Number of results to return per page.
         :return: InlineResponse2003
@@ -291,7 +293,7 @@ class CasesApi(object):
                  returns the request thread.
         """
 
-        all_params = ['ordering', '_date', 'slug', 'file_number', 'ecli', 'court', 'court__slug', 'court__jurisdiction', 'court__level_of_appeal', 'court__state', 'page', 'page_size']  # noqa: E501
+        all_params = ['ordering', 'court', 'court__state', 'has_reference_to_law', 'court__slug', 'court__jurisdiction', 'court__level_of_appeal', '_date', 'slug', 'file_number', 'ecli', 'page', 'page_size']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -314,6 +316,18 @@ class CasesApi(object):
         query_params = []
         if 'ordering' in params:
             query_params.append(('ordering', params['ordering']))  # noqa: E501
+        if 'court' in params:
+            query_params.append(('court', params['court']))  # noqa: E501
+        if 'court__state' in params:
+            query_params.append(('court__state', params['court__state']))  # noqa: E501
+        if 'has_reference_to_law' in params:
+            query_params.append(('has_reference_to_law', params['has_reference_to_law']))  # noqa: E501
+        if 'court__slug' in params:
+            query_params.append(('court__slug', params['court__slug']))  # noqa: E501
+        if 'court__jurisdiction' in params:
+            query_params.append(('court__jurisdiction', params['court__jurisdiction']))  # noqa: E501
+        if 'court__level_of_appeal' in params:
+            query_params.append(('court__level_of_appeal', params['court__level_of_appeal']))  # noqa: E501
         if '_date' in params:
             query_params.append(('date', params['_date']))  # noqa: E501
         if 'slug' in params:
@@ -322,16 +336,6 @@ class CasesApi(object):
             query_params.append(('file_number', params['file_number']))  # noqa: E501
         if 'ecli' in params:
             query_params.append(('ecli', params['ecli']))  # noqa: E501
-        if 'court' in params:
-            query_params.append(('court', params['court']))  # noqa: E501
-        if 'court__slug' in params:
-            query_params.append(('court__slug', params['court__slug']))  # noqa: E501
-        if 'court__jurisdiction' in params:
-            query_params.append(('court__jurisdiction', params['court__jurisdiction']))  # noqa: E501
-        if 'court__level_of_appeal' in params:
-            query_params.append(('court__level_of_appeal', params['court__level_of_appeal']))  # noqa: E501
-        if 'court__state' in params:
-            query_params.append(('court__state', params['court__state']))  # noqa: E501
         if 'page' in params:
             query_params.append(('page', params['page']))  # noqa: E501
         if 'page_size' in params:
@@ -345,7 +349,7 @@ class CasesApi(object):
         body_params = None
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
+            ['application/json', 'application/xml'])  # noqa: E501
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
@@ -452,7 +456,7 @@ class CasesApi(object):
             body_params = params['data']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
+            ['application/json', 'application/xml'])  # noqa: E501
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
@@ -551,7 +555,7 @@ class CasesApi(object):
         body_params = None
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
+            ['application/json', 'application/xml'])  # noqa: E501
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
@@ -587,12 +591,12 @@ class CasesApi(object):
 
         :param async_req bool
         :param str text: Search query on text content (Lucence syntax support). (required)
-        :param str facet_model_name: facet_model_name
-        :param str court_level_of_appeal: court_level_of_appeal
-        :param str _date: date
-        :param str decision_type: decision_type
         :param str court: court
         :param str court_jurisdiction: court_jurisdiction
+        :param str _date: date
+        :param str decision_type: decision_type
+        :param str facet_model_name: facet_model_name
+        :param str court_level_of_appeal: court_level_of_appeal
         :param int page: A page number within the paginated result set.
         :param int page_size: Number of results to return per page.
         :return: InlineResponse2004
@@ -617,12 +621,12 @@ class CasesApi(object):
 
         :param async_req bool
         :param str text: Search query on text content (Lucence syntax support). (required)
-        :param str facet_model_name: facet_model_name
-        :param str court_level_of_appeal: court_level_of_appeal
-        :param str _date: date
-        :param str decision_type: decision_type
         :param str court: court
         :param str court_jurisdiction: court_jurisdiction
+        :param str _date: date
+        :param str decision_type: decision_type
+        :param str facet_model_name: facet_model_name
+        :param str court_level_of_appeal: court_level_of_appeal
         :param int page: A page number within the paginated result set.
         :param int page_size: Number of results to return per page.
         :return: InlineResponse2004
@@ -630,7 +634,7 @@ class CasesApi(object):
                  returns the request thread.
         """
 
-        all_params = ['text', 'facet_model_name', 'court_level_of_appeal', '_date', 'decision_type', 'court', 'court_jurisdiction', 'page', 'page_size']  # noqa: E501
+        all_params = ['text', 'court', 'court_jurisdiction', '_date', 'decision_type', 'facet_model_name', 'court_level_of_appeal', 'page', 'page_size']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -657,18 +661,18 @@ class CasesApi(object):
         query_params = []
         if 'text' in params:
             query_params.append(('text', params['text']))  # noqa: E501
-        if 'facet_model_name' in params:
-            query_params.append(('facet_model_name', params['facet_model_name']))  # noqa: E501
-        if 'court_level_of_appeal' in params:
-            query_params.append(('court_level_of_appeal', params['court_level_of_appeal']))  # noqa: E501
-        if '_date' in params:
-            query_params.append(('date', params['_date']))  # noqa: E501
-        if 'decision_type' in params:
-            query_params.append(('decision_type', params['decision_type']))  # noqa: E501
         if 'court' in params:
             query_params.append(('court', params['court']))  # noqa: E501
         if 'court_jurisdiction' in params:
             query_params.append(('court_jurisdiction', params['court_jurisdiction']))  # noqa: E501
+        if '_date' in params:
+            query_params.append(('date', params['_date']))  # noqa: E501
+        if 'decision_type' in params:
+            query_params.append(('decision_type', params['decision_type']))  # noqa: E501
+        if 'facet_model_name' in params:
+            query_params.append(('facet_model_name', params['facet_model_name']))  # noqa: E501
+        if 'court_level_of_appeal' in params:
+            query_params.append(('court_level_of_appeal', params['court_level_of_appeal']))  # noqa: E501
         if 'page' in params:
             query_params.append(('page', params['page']))  # noqa: E501
         if 'page_size' in params:
@@ -682,7 +686,7 @@ class CasesApi(object):
         body_params = None
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
+            ['application/json', 'application/xml'])  # noqa: E501
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
@@ -789,7 +793,7 @@ class CasesApi(object):
             body_params = params['data']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
+            ['application/json', 'application/xml'])  # noqa: E501
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501

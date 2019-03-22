@@ -3,7 +3,7 @@
 """
     Open Legal Data API
 
-    With the Open Legal Data API you can access various data from the legal domain, e.g. law text or case files. The data may be used for semantic analysis or to create statistics. For more information visit our website.  # noqa: E501
+    With the Open Legal Data API you can access various data from the legal domain, e.g. law text or case files. The data may be used for semantic analysis or to create statistics. For more information visit our website. https://openlegaldata.io/  # noqa: E501
 
     OpenAPI spec version: v1
     Contact: hello@openlegaldata.io
@@ -31,169 +31,54 @@ class CaseSearch(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'text': 'str',
-        'slug': 'str',
-        'court_level_of_appeal': 'str',
-        '_date': 'date',
-        'decision_type': 'str',
         'court': 'str',
         'court_jurisdiction': 'str',
+        'text': 'str',
+        '_date': 'date',
+        'slug': 'str',
+        'decision_type': 'str',
+        'court_level_of_appeal': 'str',
         'id': 'str'
     }
 
     attribute_map = {
-        'text': 'text',
-        'slug': 'slug',
-        'court_level_of_appeal': 'court_level_of_appeal',
-        '_date': 'date',
-        'decision_type': 'decision_type',
         'court': 'court',
         'court_jurisdiction': 'court_jurisdiction',
+        'text': 'text',
+        '_date': 'date',
+        'slug': 'slug',
+        'decision_type': 'decision_type',
+        'court_level_of_appeal': 'court_level_of_appeal',
         'id': 'id'
     }
 
-    def __init__(self, text=None, slug=None, court_level_of_appeal=None, _date=None, decision_type=None, court=None, court_jurisdiction=None, id=None):  # noqa: E501
+    def __init__(self, court=None, court_jurisdiction=None, text=None, _date=None, slug=None, decision_type=None, court_level_of_appeal=None, id=None):  # noqa: E501
         """CaseSearch - a model defined in Swagger"""  # noqa: E501
 
-        self._text = None
-        self._slug = None
-        self._court_level_of_appeal = None
-        self.__date = None
-        self._decision_type = None
         self._court = None
         self._court_jurisdiction = None
+        self._text = None
+        self.__date = None
+        self._slug = None
+        self._decision_type = None
+        self._court_level_of_appeal = None
         self._id = None
         self.discriminator = None
 
-        self.text = text
-        self.slug = slug
-        if court_level_of_appeal is not None:
-            self.court_level_of_appeal = court_level_of_appeal
-        if _date is not None:
-            self._date = _date
-        if decision_type is not None:
-            self.decision_type = decision_type
         if court is not None:
             self.court = court
         if court_jurisdiction is not None:
             self.court_jurisdiction = court_jurisdiction
+        self.text = text
+        if _date is not None:
+            self._date = _date
+        self.slug = slug
+        if decision_type is not None:
+            self.decision_type = decision_type
+        if court_level_of_appeal is not None:
+            self.court_level_of_appeal = court_level_of_appeal
         if id is not None:
             self.id = id
-
-    @property
-    def text(self):
-        """Gets the text of this CaseSearch.  # noqa: E501
-
-
-        :return: The text of this CaseSearch.  # noqa: E501
-        :rtype: str
-        """
-        return self._text
-
-    @text.setter
-    def text(self, text):
-        """Sets the text of this CaseSearch.
-
-
-        :param text: The text of this CaseSearch.  # noqa: E501
-        :type: str
-        """
-        if text is None:
-            raise ValueError("Invalid value for `text`, must not be `None`")  # noqa: E501
-
-        self._text = text
-
-    @property
-    def slug(self):
-        """Gets the slug of this CaseSearch.  # noqa: E501
-
-        Used to urls (consists of court, date, file number)  # noqa: E501
-
-        :return: The slug of this CaseSearch.  # noqa: E501
-        :rtype: str
-        """
-        return self._slug
-
-    @slug.setter
-    def slug(self, slug):
-        """Sets the slug of this CaseSearch.
-
-        Used to urls (consists of court, date, file number)  # noqa: E501
-
-        :param slug: The slug of this CaseSearch.  # noqa: E501
-        :type: str
-        """
-        if slug is None:
-            raise ValueError("Invalid value for `slug`, must not be `None`")  # noqa: E501
-        if slug is not None and len(slug) > 200:
-            raise ValueError("Invalid value for `slug`, length must be less than or equal to `200`")  # noqa: E501
-
-        self._slug = slug
-
-    @property
-    def court_level_of_appeal(self):
-        """Gets the court_level_of_appeal of this CaseSearch.  # noqa: E501
-
-
-        :return: The court_level_of_appeal of this CaseSearch.  # noqa: E501
-        :rtype: str
-        """
-        return self._court_level_of_appeal
-
-    @court_level_of_appeal.setter
-    def court_level_of_appeal(self, court_level_of_appeal):
-        """Sets the court_level_of_appeal of this CaseSearch.
-
-
-        :param court_level_of_appeal: The court_level_of_appeal of this CaseSearch.  # noqa: E501
-        :type: str
-        """
-
-        self._court_level_of_appeal = court_level_of_appeal
-
-    @property
-    def _date(self):
-        """Gets the _date of this CaseSearch.  # noqa: E501
-
-        Publication date as in source  # noqa: E501
-
-        :return: The _date of this CaseSearch.  # noqa: E501
-        :rtype: date
-        """
-        return self.__date
-
-    @_date.setter
-    def _date(self, _date):
-        """Sets the _date of this CaseSearch.
-
-        Publication date as in source  # noqa: E501
-
-        :param _date: The _date of this CaseSearch.  # noqa: E501
-        :type: date
-        """
-
-        self.__date = _date
-
-    @property
-    def decision_type(self):
-        """Gets the decision_type of this CaseSearch.  # noqa: E501
-
-
-        :return: The decision_type of this CaseSearch.  # noqa: E501
-        :rtype: str
-        """
-        return self._decision_type
-
-    @decision_type.setter
-    def decision_type(self, decision_type):
-        """Sets the decision_type of this CaseSearch.
-
-
-        :param decision_type: The decision_type of this CaseSearch.  # noqa: E501
-        :type: str
-        """
-
-        self._decision_type = decision_type
 
     @property
     def court(self):
@@ -238,6 +123,121 @@ class CaseSearch(object):
         """
 
         self._court_jurisdiction = court_jurisdiction
+
+    @property
+    def text(self):
+        """Gets the text of this CaseSearch.  # noqa: E501
+
+
+        :return: The text of this CaseSearch.  # noqa: E501
+        :rtype: str
+        """
+        return self._text
+
+    @text.setter
+    def text(self, text):
+        """Sets the text of this CaseSearch.
+
+
+        :param text: The text of this CaseSearch.  # noqa: E501
+        :type: str
+        """
+        if text is None:
+            raise ValueError("Invalid value for `text`, must not be `None`")  # noqa: E501
+
+        self._text = text
+
+    @property
+    def _date(self):
+        """Gets the _date of this CaseSearch.  # noqa: E501
+
+        Publication date as in source  # noqa: E501
+
+        :return: The _date of this CaseSearch.  # noqa: E501
+        :rtype: date
+        """
+        return self.__date
+
+    @_date.setter
+    def _date(self, _date):
+        """Sets the _date of this CaseSearch.
+
+        Publication date as in source  # noqa: E501
+
+        :param _date: The _date of this CaseSearch.  # noqa: E501
+        :type: date
+        """
+
+        self.__date = _date
+
+    @property
+    def slug(self):
+        """Gets the slug of this CaseSearch.  # noqa: E501
+
+        Used to urls (consists of court, date, file number)  # noqa: E501
+
+        :return: The slug of this CaseSearch.  # noqa: E501
+        :rtype: str
+        """
+        return self._slug
+
+    @slug.setter
+    def slug(self, slug):
+        """Sets the slug of this CaseSearch.
+
+        Used to urls (consists of court, date, file number)  # noqa: E501
+
+        :param slug: The slug of this CaseSearch.  # noqa: E501
+        :type: str
+        """
+        if slug is None:
+            raise ValueError("Invalid value for `slug`, must not be `None`")  # noqa: E501
+        if slug is not None and len(slug) > 200:
+            raise ValueError("Invalid value for `slug`, length must be less than or equal to `200`")  # noqa: E501
+
+        self._slug = slug
+
+    @property
+    def decision_type(self):
+        """Gets the decision_type of this CaseSearch.  # noqa: E501
+
+
+        :return: The decision_type of this CaseSearch.  # noqa: E501
+        :rtype: str
+        """
+        return self._decision_type
+
+    @decision_type.setter
+    def decision_type(self, decision_type):
+        """Sets the decision_type of this CaseSearch.
+
+
+        :param decision_type: The decision_type of this CaseSearch.  # noqa: E501
+        :type: str
+        """
+
+        self._decision_type = decision_type
+
+    @property
+    def court_level_of_appeal(self):
+        """Gets the court_level_of_appeal of this CaseSearch.  # noqa: E501
+
+
+        :return: The court_level_of_appeal of this CaseSearch.  # noqa: E501
+        :rtype: str
+        """
+        return self._court_level_of_appeal
+
+    @court_level_of_appeal.setter
+    def court_level_of_appeal(self, court_level_of_appeal):
+        """Sets the court_level_of_appeal of this CaseSearch.
+
+
+        :param court_level_of_appeal: The court_level_of_appeal of this CaseSearch.  # noqa: E501
+        :type: str
+        """
+
+        self._court_level_of_appeal = court_level_of_appeal
 
     @property
     def id(self):

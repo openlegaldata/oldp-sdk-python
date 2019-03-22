@@ -3,7 +3,7 @@
 """
     Open Legal Data API
 
-    With the Open Legal Data API you can access various data from the legal domain, e.g. law text or case files. The data may be used for semantic analysis or to create statistics. For more information visit our website.  # noqa: E501
+    With the Open Legal Data API you can access various data from the legal domain, e.g. law text or case files. The data may be used for semantic analysis or to create statistics. For more information visit our website. https://openlegaldata.io/  # noqa: E501
 
     OpenAPI spec version: v1
     Contact: hello@openlegaldata.io

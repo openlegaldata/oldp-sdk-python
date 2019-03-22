@@ -2,7 +2,7 @@
 """
     Open Legal Data API
 
-    With the Open Legal Data API you can access various data from the legal domain, e.g. law text or case files. The data may be used for semantic analysis or to create statistics. For more information visit our website.  # noqa: E501
+    With the Open Legal Data API you can access various data from the legal domain, e.g. law text or case files. The data may be used for semantic analysis or to create statistics. For more information visit our website. https://openlegaldata.io/  # noqa: E501
 
     OpenAPI spec version: v1
     Contact: hello@openlegaldata.io
@@ -592,7 +592,7 @@ class ApiClient(object):
             )
 
     def __hasattr(self, object, name):
-            return name in object.__class__.__dict__
+        return name in object.__class__.__dict__
 
     def __deserialize_model(self, data, klass):
         """Deserializes list or dict to model.
@@ -602,7 +602,8 @@ class ApiClient(object):
         :return: model object.
         """
 
-        if not klass.swagger_types and not self.__hasattr(klass, 'get_real_child_model'):
+        if (not klass.swagger_types and
+                not self.__hasattr(klass, 'get_real_child_model')):
             return data
 
         kwargs = {}
